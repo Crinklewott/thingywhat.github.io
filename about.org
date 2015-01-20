@@ -2,13 +2,13 @@
 
 * About thingywhat
 
-Hey all! I am thingywhat, a taker of naps and consumer of coffee... Or
-for the uninitialized: a programmer.
+Hey all! I am thingywhat, a taker of naps and consumer of
+coffee... (Programmer)
 
-I am not just any programmer either, no, I am a /fetishist/
-programmer. A fetishist programmer with an interest in developing
-things that either entertain, or are useful to people with similar
-interests to myself.
+Then again, that should come as no surprise if you notice the domain.
+
+Most of my development time is spent working on things that either
+entertain, or are useful to people with similar interests to myself.
 
 I might also poke around some science every now and then too, but I'm
 not really good at it. (Yet!)
