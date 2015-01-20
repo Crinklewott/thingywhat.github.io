@@ -1,15 +1,15 @@
 #+TITLE: Index
 
-Heyas! Welcome to an experiment.
+My, my! What a strange place you wandered into!
 
-What kind of experiment, you ask?
+Welcome to the Things of Whatt; a blog about the musings, amusement,
+and otherwise of [[https://github.com/thingywhat/][thingywhat]].
 
-The Emacs blog kind, of course!
+I will occasionally, write on the topics of programming, fetishes, and
+every possible combination of these topics. (Innumerable, I know!)
 
-This site is planned to be a little personal blog where I can post
-projects, thoughts, ideas... Maybe even a little philosophy every now
-and then.
+If you have any interesting questions for me, I might blog an answer
+or two as well. Who knows?
 
-I should note, that while the blog and my repositories are SFW, there
-are links to some very NSFW things in here, so if you are under 18, I
-would recommend proceeding with caution.
+Happy reading, and hope my sarcasm doesn't eat too much into your
+brains.

@@ -1,14 +1,8 @@
 #+TITLE: About
 
-* About thingywhat
-
 Hey all! I am thingywhat, a taker of naps and consumer of
-coffee... (Programmer)
-
-Then again, that should come as no surprise if you notice the domain.
+coffee...
 
 Most of my development time is spent working on things that either
 entertain, or are useful to people with similar interests to myself.
-
-I might also poke around some science every now and then too, but I'm
-not really good at it. (Yet!)
+I might also poke around some science every now and then too.
