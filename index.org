@@ -2,7 +2,7 @@
 
 My, my! What a strange place you wandered into!
 
-Welcome to the Things of Whatt; a blog about the musings, amusement,
+Welcome to the Things of Whatt; a blog about the musings, amusements,
 and otherwise of [[https://github.com/thingywhat/][thingywhat]].
 
 I will occasionally, write on the topics of programming, fetishes, and
