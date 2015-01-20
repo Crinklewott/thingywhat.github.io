@@ -1,6 +1,6 @@
 #+TITLE: Index
 
-My, my! What a strange place you wandered into!
+My, my! What a strange place you've wandered into!
 
 Welcome to the Things of Whatt; a blog about the musings, amusements,
 and otherwise of [[https://github.com/thingywhat/][thingywhat]].
