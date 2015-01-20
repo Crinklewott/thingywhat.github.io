@@ -1,3 +1,15 @@
 #+TITLE: Index
 
-This is the home page of thingywhat.
+Heyas! Welcome to an experiment.
+
+What kind of experiment, you ask?
+
+The Emacs blog kind, of course!
+
+This site is planned to be a little personal blog where I can post
+projects, thoughts, ideas... Maybe even a little philosophy every now
+and then.
+
+I should note, that while the blog and my repositories are SFW, there
+are links to some very NSFW things in here, so if you are under 18, I
+would recommend proceeding with caution.
