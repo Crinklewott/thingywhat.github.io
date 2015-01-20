@@ -1,0 +1,20 @@
+#+TITLE:       Test post, please ignore
+#+AUTHOR:      thingywhat
+#+EMAIL:       thingywhat@live.com
+#+DATE:        2015-01-19 Mon
+#+URI:         /blog/%y/%m/%d/Test post, please ignore
+#+KEYWORDS:    blog
+#+TAGS:        blog
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: The first post of my blog! Ignore it and stuff.
+
+This isn't really a test post, but you /can/ ignore it if you like.
+
+I find it amusing that the words "please ignore" is often succeeded
+with a tsunami of people shouting. "NO!"
+
+The best example is a relatively famous [[http://www.reddit.com/comments/92dd8/test_post_please_ignore][Reddit post]] of the same name,
+which very quickly became one of the most upvoted posts of all
+time. A fantastic example of a nifty little thing called the
+[[http://en.wikipedia.org/wiki/Streisand_effect][streisand effect]].
