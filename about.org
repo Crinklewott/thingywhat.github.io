@@ -6,3 +6,6 @@ coffee...
 Most of my development time is spent working on things that either
 entertain, or are useful to people with similar interests to myself.
 I might also poke around some science every now and then.
+
+If you are curious about the avatar, it came from [[http://www.pixiv.net/member_illust.php?mode=medium&illust_id=11354643][this sweet artist]] on
+Pixiv.
