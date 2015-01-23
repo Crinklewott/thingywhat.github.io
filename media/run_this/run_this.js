@@ -6,8 +6,6 @@ window.onload = function(){
        spinner_path: './spinner.gif'   // location of the spinner image
      };
 
-     if (options) $.extend(config, options);
-
      // CSS class for the code sample wrapper
      var run_this_class = config.run_this_class;
      // add a button to the code samples on the page (marked with run_this_class)
