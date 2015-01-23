@@ -31,7 +31,7 @@ var gamble = (function(){
   var implement = [
     {name:"hand", verb: "handspanked", adjectives:["heavy"]},
     {name:"belt", verb:"belted", adjectives:["leather"]},
-    {name:"cane", verb:"caned", adjectives:["wicked","ratten","fierce"]},
+    {name:"cane", verb:"caned", adjectives:["wicked","rattan","fierce"]},
     {name:"switch", verb:"switched", adjectives:["tiny","swift"]},
     {name:"brush", verb:"spanked", adjectives:["heavy","bath","hair","wooden"]},
     {name:"paddle", verb:"paddled", adjectives:["lexan","wooden","hole-filled","frat","ping-pong"]},
