@@ -1,4 +1,4 @@
-$(document).ready(
+$(document).ready(function(){
 (function($) {
    $.fn.runThis = function (options) {
 
