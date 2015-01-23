@@ -161,12 +161,3 @@ window.onload = function(){
  })(jQuery);
 };
 
-// on DOM ready
-$(document).ready(
-    function(){
-        if(XMLHttpRequest)
-		        $().runThis({ spinner_path: '/images/spinner.gif' });
-        else
-            alert("Your browser does not support AJAX!");
-});
-
