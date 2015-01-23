@@ -3,8 +3,8 @@
 #+EMAIL:       thingywhat@Dee
 #+DATE:        2015-01-22 Thu
 #+URI:         /blog/%y/%m/%d/A script for indecisive doms and daredevil butt-gamblers
-#+KEYWORDS:    spanking,lisp,script,javascript
-#+TAGS:        spanking,lisp,script,javascript
+#+KEYWORDS:    spanking,script,javascript
+#+TAGS:        spanking,script,javascript
 #+LANGUAGE:    en
 #+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
 #+DESCRIPTION: A spanking randomizer
@@ -13,11 +13,12 @@ Maybe you like to gamble? Maybe you have a top who is indecisive? Who
 knows? Either way, you are /definitely/ getting a spanking...
 
 But you have chosen to leave /how/ it will happen to chance. What kind
-of spanking will you get? Nobody knows, except you, because it is
-displayed below this line:
+of spanking will you get? Nobody knows...
+
+Nobody except you:
 
 #+BEGIN_HTML
-<pre id="output" style="word-break:normal;" onclick="gamble();"></pre>
+<pre id="output" style="word-break:normal;cursor:pointer;" onclick="gamble();"></pre>
 <script type="text/javascript">
 window.onload = function(){
   gamble();
@@ -61,3 +62,5 @@ var gamble = (function(){
 })();
 </script>
 #+END_HTML
+
+If you can't do what it says, clicking it will generate a new one.
