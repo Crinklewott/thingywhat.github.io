@@ -1,8 +1,8 @@
-#+TITLE:       A script for indecisive doms and daredevil butt-gamblers
+#+TITLE:       A script for daredevil butt-gamblers
 #+AUTHOR:      thingywhat
 #+EMAIL:       thingywhat@Dee
 #+DATE:        2015-01-22 Thu
-#+URI:         /blog/%y/%m/%d/A script for indecisive doms and daredevil butt-gamblers
+#+URI:         /blog/%y/%m/%d/A script for daredevil butt-gamblers
 #+KEYWORDS:    spanking,script,javascript
 #+TAGS:        spanking,script,javascript
 #+LANGUAGE:    en
