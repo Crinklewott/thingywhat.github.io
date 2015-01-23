@@ -63,4 +63,5 @@ var gamble = (function(){
 </script>
 #+END_HTML
 
-If you can't do what it says, clicking it will generate a new one.
+(If you can't do what it says, clicking the box above will generate a
+new one.)
