@@ -17,7 +17,7 @@ of spanking will you get? Nobody knows, except you, because it is
 displayed below this line:
 
 #+BEGIN_HTML
-<pre id="output" style="word-break:normal;"></pre>
+<pre id="output" style="word-break:normal;" onclick="gamble();"></pre>
 <script type="text/javascript">
 window.onload = function(){
   gamble();
