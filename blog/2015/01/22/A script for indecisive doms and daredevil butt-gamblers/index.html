@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>A script for indecisive doms and daredevil butt-gamblers - The Things of Whatt</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="thingywhat" />
+    <meta name="description" content="A spanking randomizer" />
+    <meta name="keywords" content="spanking,lisp,script" />
+    <link rel="stylesheet" href="/media/css/main.css" type="text/css">
+    <link rel="stylesheet" href="/media/css/prettify.css" type="text/css">
+  </head>
+  <body class="container">
+    <div>
+      <header class="masthead">
+        <h1 class="masthead-title"><a href="/">The Things of Whatt</a></h1>
+        <p>...and other stuff</p>
+        <ul>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/tags/">Tags</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="https://github.com/thingywhat/">GitHub</a></li>
+          <li><a href="/rss.xml">RSS</a></li>
+        </ul>
+        <form method="get" id="searchform" action="http://www.google.com/search">
+          <input type="text" class="field" name="q" id="s" placeholder="Search">
+          <input type="hidden" name="q" value="site:thingywhat.github.io">
+        </form>
+	
+	  <img class="avatar" src="https://en.gravatar.com/userimage/79246315/a35f04cee74bf63e9372cbcd7dd5c65f.png?size=200" />
+	
+      </header>
+    </div>
+
+<div>
+<div class="post">
+<h1>A script for indecisive doms and daredevil butt-gamblers</h1>
+<p>
+Testing run-this embedding:
+</p>
+
+<link rel="stylesheet" type="text/css" href="/media/run_this/run_this.css" />
+<script type="text/javascript" src="http://wbsp.arb.ltu.se/Motionbase/workingdocs/xmpp-code/strophejs/scripts/flXHR.js"></script>
+<script type="text/javascript" src="/media/run_this/run_this.js"></script>
+<pre lang="clisp" class="run-this">
+(defparameter *implements*
+  '((hand handspanked (heavy))
+    (belt belted (leather))
+    (cane caned (wicked ratten fierce))
+    (switch switched (tiny swift))
+    (brush spanked (heavy bath hair wooden))
+    (paddle paddled (lexan wooden hole-filled frat ping-pong))
+    (spoon spanked (wooden mixing slotted)))
+  "A list of implements a spanking can take place with, along with
+  adjectives, variants, and the verb used to describe what a spanking
+  with eah is called.")
+
+(defparameter *positions*
+  '(otk diaper bent-over under-arm prone)
+  "A list of possible spanking positions.")
+
+(defparameter *dress*
+  '("over your pants" "on your underwear" pantsless naked)
+  "A list of your potential state of dress.")
+
+(defparameter *minimum-spankings* 10
+  "The minimum possible times you can be spanked")
+
+(defparameter *maximum-spankings* 100
+  "The maximum possible times you can be spanked")
+
+(defun random-spanking (max min positions implements dress)
+  "Picks a random implement, a random position, and then creates a
+completely random spanking."
+  (flet ((pick (list)
+           (nth (random (length list)) list)))
+    (let ((implement (pick implements)))
+      `(you should be ,(second implement) ,(pick dress)
+            ,(+ min (random (- max min))) times in the ,(pick positions)
+            position with a ,(pick (third implement)) ,(first implement)))))
+
+(defun stylize-string (str)
+  "Stylizes a string so it prints with correct capitalization and
+formatting from a string."
+  (labels
+      ((style (char-list caps)
+         (when char-list
+           (let ((first (car char-list))
+                 (rest (cdr char-list)))
+             (cond
+               ((char= first #\space) (cons #\space (style rest caps)))
+               ((char= first #\.) (cons #\. (style rest t)))
+               (caps (cons (char-upcase first) (style rest nil)))
+               (t (cons (char-downcase first) (style rest nil))))))))
+    (coerce (style (coerce str 'list) t) 'string)))
+
+(defun pretty-random-spanking ()
+  "Decides on a random spanking, and prints it out with the string
+pretty-printer."
+  (flet ((style (str)
+           (stylize-string
+            (concatenate 'string
+                         (string-trim "()" str) "!"))))
+    (style (princ-to-string (random-spanking
+                             *maximum-spankings*
+                             *minimum-spankings*
+                             *positions*
+                             *implements*
+                             *dress*)))))
+</pre>
+
+</div>
+</div>
+    <div>
+      <div class="post-meta">
+        <span title="post date" class="post-info">2015-01-22</span>
+        <span title="last modification date" class="post-info">2015-01-22</span>
+        <span title="tags" class="post-info"><a href="/tags/spanking/">spanking</a>, <a href="/tags/lisp/">lisp</a>, <a href="/tags/script/">script</a></span>
+        <span title="author" class="post-info">thingywhat</span>
+      </div>
+      <section>
+        <h1>Comments</h1>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          //var disqus_developer = 1;
+          var disqus_identifier = "/blog/2015/01/22/A script for indecisive doms and daredevil butt-gamblers";
+          var disqus_url = "http://thingywhat.github.io/blog/2015/01/22/A script for indecisive doms and daredevil butt-gamblers";
+          var disqus_shortname = 'thethingsofwhatt';
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </section>
+      <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+      <script src="https://google-code-prettify.googlecode.com/svn/loader/prettify.js"></script>
+      <script src="/media/js/main.js"></script>
+      <div class="footer">
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x (<a href="http://orgmode.org">Org mode</a> 8.x)</p>
+        <p>
+            Copyright &copy; 2012 - <span id="footerYear"></span> <a href="mailto:thingywhat@Dee">thingywhat</a>
+          &nbsp;&nbsp;-&nbsp;&nbsp;
+          Powered by <a href="https://github.com/kelvinh/org-page" target="_blank">org-page</a>
+	    <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+        </p>
+      </div>
+    </div>
+
+  </body>
+</html>
