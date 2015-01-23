@@ -1,7 +1,4 @@
 window.onload = function(){
-(function($) {
-   $.fn.runThis = function (options) {
-
      var config = {
        run_this_class: "run-this",     // css class on code to run
        attr: 'title',                  // attribute to use to group related snippets of code
@@ -154,10 +151,5 @@ window.onload = function(){
 
        // enhance code blocks on the page
        enhanceCodeBlocks();
-
-       // for chaining
-       return this;
-   };
- })(jQuery);
 };
 
