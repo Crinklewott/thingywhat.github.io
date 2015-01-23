@@ -1,3 +1,4 @@
+$(document).ready(
 (function($) {
    $.fn.runThis = function (options) {
 
@@ -158,7 +159,7 @@
        return this;
    };
  })(jQuery);
-
+});
 // on DOM ready
 $(document).ready(
     function(){
@@ -167,3 +168,4 @@ $(document).ready(
         else
             alert("Your browser does not support AJAX!");
 });
+
