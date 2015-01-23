@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>A script for daredevil butt-gamblers - The Things of Whatt</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="thingywhat" />
+    <meta name="description" content="A spanking randomizer" />
+    <meta name="keywords" content="spanking,script,javascript" />
+    <link rel="stylesheet" href="/media/css/main.css" type="text/css">
+    <link rel="stylesheet" href="/media/css/prettify.css" type="text/css">
+  </head>
+  <body class="container">
+    <div>
+      <header class="masthead">
+        <h1 class="masthead-title"><a href="/">The Things of Whatt</a></h1>
+        <p>...and other stuff</p>
+        <ul>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/tags/">Tags</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="https://github.com/thingywhat/">GitHub</a></li>
+          <li><a href="/rss.xml">RSS</a></li>
+        </ul>
+        <form method="get" id="searchform" action="http://www.google.com/search">
+          <input type="text" class="field" name="q" id="s" placeholder="Search">
+          <input type="hidden" name="q" value="site:thingywhat.github.io">
+        </form>
+	
+	  <img class="avatar" src="https://en.gravatar.com/userimage/79246315/a35f04cee74bf63e9372cbcd7dd5c65f.png?size=200" />
+	
+      </header>
+    </div>
+
+<div>
+<div class="post">
+<h1>A script for daredevil butt-gamblers</h1>
+<p>
+Maybe you like to gamble? Maybe you have a top who is indecisive? Who
+knows? Either way, you are <i>definitely</i> getting a spanking...
+</p>
+
+<p>
+But you have chosen to leave <i>how</i> it will happen to chance. What kind
+of spanking will you get? Nobody knows...
+</p>
+
+<p>
+Nobody except you:
+</p>
+
+<pre id="output" style="word-break:normal;cursor:pointer;" onclick="gamble();"></pre>
+<script type="text/javascript">
+window.onload = function(){
+  gamble();
+};
+
+var gamble = (function(){
+  var maximum = 100;
+  var minimum = 10;
+
+  var implement = [
+    {name:"hand", verb: "handspanked", adjectives:["heavy"]},
+    {name:"belt", verb:"belted", adjectives:["leather"]},
+    {name:"cane", verb:"caned", adjectives:["wicked","ratten","fierce"]},
+    {name:"switch", verb:"switched", adjectives:["tiny","swift"]},
+    {name:"brush", verb:"spanked", adjectives:["heavy","bath","hair","wooden"]},
+    {name:"paddle", verb:"paddled", adjectives:["lexan","wooden","hole-filled","frat","ping-pong"]},
+    {name:"spoon", verb:"spanked", adjectives:["wooden","mixing","slotted"]}
+  ];
+  
+  var position = ["over-the-knee", "diaper", "bent-over", "under-arm", "prone"];
+  
+  var dress = ["over your pants", "on your underwear", "pantsless", "naked"];
+  
+  function random(min, max){
+    return min + Math.floor(Math.random() * (max - min));
+  }
+  function pick(array){
+    return array[random(0, array.length)];
+  }
+
+  return function(){
+    var impl = pick(implement);
+    var pos = pick(position);
+    var state = pick(dress);
+    
+      document.getElementById("output").innerHTML = "You should be " +
+      impl.verb + " " + state + " " + random(minimum, maximum) +
+      " times in the " + pos + " position with a " +
+      pick(impl.adjectives) + " " + impl.name;
+  };
+})();
+</script>
+
+<p>
+(If you can't do what it says, clicking the box above will generate a
+new one.)
+</p>
+
+</div>
+</div>
+    <div>
+      <div class="post-meta">
+        <span title="post date" class="post-info">2015-01-22</span>
+        <span title="last modification date" class="post-info">2015-01-22</span>
+        <span title="tags" class="post-info"><a href="/tags/spanking/">spanking</a>, <a href="/tags/script/">script</a>, <a href="/tags/javascript/">javascript</a></span>
+        <span title="author" class="post-info">thingywhat</span>
+      </div>
+      <section>
+        <h1>Comments</h1>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          //var disqus_developer = 1;
+          var disqus_identifier = "/blog/2015/01/22/A script for daredevil butt-gamblers";
+          var disqus_url = "http://thingywhat.github.io/blog/2015/01/22/A script for daredevil butt-gamblers";
+          var disqus_shortname = 'thethingsofwhatt';
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </section>
+      <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+      <script src="https://google-code-prettify.googlecode.com/svn/loader/prettify.js"></script>
+      <script src="/media/js/main.js"></script>
+      <div class="footer">
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x (<a href="http://orgmode.org">Org mode</a> 8.x)</p>
+        <p>
+            Copyright &copy; 2012 - <span id="footerYear"></span> <a href="mailto:thingywhat@Dee">thingywhat</a>
+          &nbsp;&nbsp;-&nbsp;&nbsp;
+          Powered by <a href="https://github.com/kelvinh/org-page" target="_blank">org-page</a>
+	    <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+        </p>
+      </div>
+    </div>
+
+  </body>
+</html>
