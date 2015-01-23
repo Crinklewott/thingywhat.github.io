@@ -9,11 +9,23 @@
 #+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
 #+DESCRIPTION: A spanking randomizer
 
+Maybe you like to gamble? Maybe you need to make a decision without
+/you/ actually deciding? Maybe you have a top who is indecisive? Who
+knows?
+
+Either way, you are *definitely* getting a spanking...
+
+But you or your top have decided to leave /how/ it will happen to
+chance. Duration, position, implement, etc...
+
+What kind of spanking will you get? Nobody knows, except you, because
+it is displayed below this line:
+
 #+BEGIN_HTML
-<pre id="output"></pre>
+<pre id="output" style="white-space: pre-wrap; word-wrap: break-word;"></pre>
 <script type="text/javascript">
 window.onload = function(){
-  document.getElementById("output").innerHTML = gamble();
+  gamble();
 };
 
 var gamble = (function(){
@@ -46,9 +58,10 @@ var gamble = (function(){
     var pos = pick(position);
     var state = pick(dress);
     
-    return "You should be " + impl.verb + " " + state + " " +
-      random(minimum, maximum) + " times in the " + pos +
-      " position with a " + pick(impl.adjectives) + " " + impl.name;
+      document.getElementById("output").innerHTML = "You should be " +
+      impl.verb + " " + state + " " + random(minimum, maximum) +
+      " times in the " + pos + " position with a " +
+      pick(impl.adjectives) + " " + impl.name;
   };
 })();
 </script>
