@@ -1,4 +1,4 @@
-$(document).ready(function(){
+window.onload = function(){
 (function($) {
    $.fn.runThis = function (options) {
 
@@ -159,7 +159,8 @@ $(document).ready(function(){
        return this;
    };
  })(jQuery);
-});
+};
+
 // on DOM ready
 $(document).ready(
     function(){
