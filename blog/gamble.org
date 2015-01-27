@@ -47,13 +47,26 @@ be happy? What about if it happened twice? Three times? Every day?
 Eventually the incredible becomes monotonous, /regular/...  These
 things lose what made them incredible.
 
-This is true for design too.
-
 When designing a game, adding a hint of chance to it can make those
 who play it more invested, more emotionally involved. The chance for
 something to happen can make players tense, excitable... But this
 requires balance because many people don't like feeling /completely/
 tense all the time.
+
+But what happens if you start out with something that starts out
+completely random? Is it possible to make these sorts of things
+engaging too? Surely you couldn't add more chance could you?
+
+Of course you can! And it has the same effect.
+
+If you start out with something that is purely random, introducing a
+some small degree of control in the form of additional chance will
+have nearly the same effect as introducing chance into something
+without any to begin with. This is because the semblance of control is
+what *makes* these things engaging, and not the subject you apply it
+to.
+
+What is this sorcery? Allow me to introduce you to /mostly-random/.
 
 * Introducing mostly-random!
 If you were, hypothetically, going to make a dice game that involved a
