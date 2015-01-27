@@ -1,0 +1,121 @@
+#+TITLE:       Making gambles fun!
+#+AUTHOR:      thingywhat
+#+EMAIL:       thingywhat@Dee
+#+DATE:        2015-01-26 Mon
+#+URI:         /blog/%y/%m/%d/Making gambles fun!
+#+KEYWORDS:    gamble,design
+#+TAGS:        blog
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: The art of mostly-random
+
+Is rolling dice fun? Not really.
+
+Can it be? /You betcha!/
+
+There are few things in this world more engrossing than
+chances. Chances for glorious things, chances for terrible things; The
+very chance that something /might/ happen is enough to occupy someone
+endlessly... And chances are absolutely everywhere! The world we live
+in is dominated by examples of probability.
+
+/But nothing is ever certain./
+
+Is this excitement? Is this dread? We often take preemptive measures
+to try to sway our chances one way or another -- so that we have some
+degree of control over what might happen. Our actions play into our
+chances and steer our probability in one way or another. It makes us
+feel like we have power.
+
+/But nothing is ever certain./
+
+Many claim that they hate chance, and that may be true in a sense:
+They may not want to play the machines in Las Vegas or buy lottery
+tickets. They also might think that they would rather they always have
+the most positive outcome from any situation. This is only natural.
+
+But that's not how chance works... It is not simply the probability
+that you get something you like or hate -- it acts as an amplifier
+too!
+
+If you won at absolutely everything and always had the best outcome,
+these things would suddenly stop being a novelty and start becoming a
+norm. If this happens it will cheapen every experience you ever have.
+
+If you saw a beautiful sunset, or received a priceless gift, would you
+be happy? What about if it happened twice? Three times? Every day?
+Eventually the incredible becomes monotonous, /regular/...  These
+things lose what made them incredible.
+
+This is true for design too.
+
+When designing a game, adding a hint of chance to it can make the
+those who play it more invested, more emotionally involved. The chance
+for something to happen can make players tense, excitable... But this
+requires balance because many people don't like feeling /completely/
+tense all the time.
+
+* Introducing mostly-random!
+If you were, hypothetically, going to make a dice game that involved a
+player [[http://www.getdare.com/bbs/forumdisplay.php?f=23][having to do something decided by simply rolling a set of dice]]
+*(NSFW)* and getting a random outcome... If you are the gambling type,
+you might already enjoy this, but it would only appeal to a very
+specific type of person.
+
+But what if you suddenly gave the player some amount of control?
+Something where if the outcome of the chance was terrible, you allowed
+them to, for a trade-off, take a chance again.
+
+Does that suddenly sound more engaging?
+
+What happens if you allow the player to sway their odds as many times
+as they like for this trade-off?
+
+Suddenly a simple dice game would have completely different
+dynamics. It would involve a mental game of chicken where the
+trade-offs would eventually intersect with the worst case
+scenario... A game where those with bad luck would want to get as
+close as they could to this intersection, and those with good luck
+have a cushion meaning that they might be able to recover if their
+luck takes a turn.
+
+It would give players a semblance of control where their decisions
+suddenly transform a simple game of probability into a game of
+contemplation and choice.
+
+/But nothing is ever certain./
+
+The above example is using the literal epitome of chance: dice... Now
+imagine if you were to take these concepts and apply them to something
+already engaging. Try to brainstorm of a way something you love or
+hate could become interesting by introducing chance; what can you
+spice up?
+
+Go ahead... I'll wait!
+
+...
+
+...
+
+...back? Ok! Continuing on...
+
+* The trap
+One thing you might have been tempted to do during your little
+brainstorming session is make chance play an overly large part in
+something.
+
+If you involve chance too much, it make the things you introduce it
+into incredibly frustrating. Especially if it completely turns the
+tide of your luck instantly...not to say that this doesn't have its
+place. (Like in Mario Kart)
+
+#+BEGIN_HTML
+<iframe width="560" height="315" src="//www.youtube.com/embed/fuSutyb1fIo" frameborder="0" allowfullscreen></iframe>
+#+END_HTML
+
+For common things, low-profile chance is generally more fruitful,
+whereas for rare occurrences, sometimes it is fun to have crazy
+chances play a role. Chance is a spice of life, and like putting too
+many spices into your cooking, discretion is the better part of valor.
+
+Where can you use this spice?
