@@ -1,9 +1,9 @@
-#+TITLE:       Making gambles fun!
+#+TITLE:       Making chances fun!
 #+AUTHOR:      thingywhat
 #+EMAIL:       thingywhat@Dee
 #+DATE:        2015-01-26 Mon
 #+URI:         /blog/%y/%m/%d/Making gambles fun!
-#+KEYWORDS:    gamble,design
+#+KEYWORDS:    chance,design
 #+TAGS:        blog
 #+LANGUAGE:    en
 #+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
@@ -31,8 +31,8 @@ feel like we have power.
 
 Many claim that they hate chance, and that may be true in a sense:
 They may not want to play the machines in Las Vegas or buy lottery
-tickets. They also might think that they would rather they always have
-the most positive outcome from any situation. This is only natural.
+tickets. They also might think that they would rather always have the
+most positive outcome from any situation. This is only natural.
 
 But that's not how chance works... It is not simply the probability
 that you get something you like or hate -- it acts as an amplifier
