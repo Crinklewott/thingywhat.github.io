@@ -2,7 +2,7 @@
 #+AUTHOR:      thingywhat
 #+EMAIL:       thingywhat@Dee
 #+DATE:        2015-01-26 Mon
-#+URI:         /blog/%y/%m/%d/Making gambles fun!
+#+URI:         /blog/%y/%m/%d/Making chances fun!
 #+KEYWORDS:    chance,design
 #+TAGS:        blog
 #+LANGUAGE:    en
