@@ -58,7 +58,7 @@ var gamble = (function(){
   var minimum = 10;
 
   var implement = [
-    {name:"hand", verb: "handspanked", "max":150, adjectives:null},
+    {name:"hand", verb: "handspanked", "max":150, adjectives:false},
     {name:"belt", verb:"belted", "max":75, adjectives:["leather"]},
     {name:"cane", verb:"caned", "max":30, adjectives:["wicked","rattan","fierce"]},
     {name:"switch", verb:"switched", "max":50, adjectives:["tiny","swift"]},
@@ -85,8 +85,8 @@ var gamble = (function(){
     
       document.getElementById("output").innerHTML = "You should be " +
       impl.verb + " " + state + " " + random(minimum, impl.max) +
-      " times in the " + pos + " position" + (impl.agjectives ? " with a " +
-      pick(impl.adjectives) + " " + impl.name : "") + "!";
+      " times in the " + pos + " position" + (impl.adjectives ? " with a " +
+      pick(impl.adjectives) + " " + impl.name : "");
   };
 })();
 </script>
