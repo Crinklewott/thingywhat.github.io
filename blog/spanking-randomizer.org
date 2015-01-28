@@ -41,6 +41,13 @@ var gamble = (function(){
   
   var dress = ["over your pants", "on your underwear", "pantsless", "naked"];
   
+  var statement = ["You should be",
+                   "It's time to be",
+                   "You'd better be ready to be",
+                   "Uh-oh! You're gonna get",
+                   "Ouch! Chance says you will be",
+                   "Yeaaaah, you're gonna be"];
+
   function random(min, max){
     return min + Math.floor(Math.random() * (max - min));
   }
@@ -53,7 +60,7 @@ var gamble = (function(){
     var pos = pick(position);
     var state = pick(dress);
     
-      document.getElementById("output").innerHTML = "You should be " +
+      document.getElementById("output").innerHTML = pick(statement) + " " +
       impl.verb + " " + state + " " + random(minimum, impl.max) +
       " times in the " + pos + " position" + (impl.adjectives ? " with a " +
       pick(impl.adjectives) + " " + impl.name : "");
