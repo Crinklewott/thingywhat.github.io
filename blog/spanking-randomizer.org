@@ -25,7 +25,6 @@ window.onload = function(){
 };
 
 var gamble = (function(){
-  var maximum = 100;
   var minimum = 10;
 
   var implement = [
@@ -55,7 +54,7 @@ var gamble = (function(){
     var state = pick(dress);
     
       document.getElementById("output").innerHTML = "You should be " +
-      impl.verb + " " + state + " " + random(minimum, maximum) +
+      impl.verb + " " + state + " " + random(minimum, impl.max) +
       " times in the " + pos + " position with a " +
       pick(impl.adjectives) + " " + impl.name;
   };
