@@ -55,17 +55,16 @@ window.onload = function(){
 };
 
 var gamble = (function(){
-  var maximum = 100;
   var minimum = 10;
 
   var implement = [
-    {name:"hand", verb: "handspanked", adjectives:["heavy"]},
-    {name:"belt", verb:"belted", adjectives:["leather"]},
-    {name:"cane", verb:"caned", adjectives:["wicked","rattan","fierce"]},
-    {name:"switch", verb:"switched", adjectives:["tiny","swift"]},
-    {name:"brush", verb:"spanked", adjectives:["heavy","bath","hair","wooden"]},
-    {name:"paddle", verb:"paddled", adjectives:["lexan","wooden","hole-filled","frat","ping-pong"]},
-    {name:"spoon", verb:"spanked", adjectives:["wooden","mixing","slotted"]}
+    {name:"hand", verb: "handspanked", "max":200, adjectives:["heavy"]},
+    {name:"belt", verb:"belted", "max":75, adjectives:["leather"]},
+    {name:"cane", verb:"caned", "max":30, adjectives:["wicked","rattan","fierce"]},
+    {name:"switch", verb:"switched", "max":50, adjectives:["tiny","swift"]},
+    {name:"brush", verb:"spanked", "max":100, adjectives:["heavy","bath","hair","wooden"]},
+    {name:"paddle", verb:"paddled", "max":40, adjectives:["lexan","wooden","hole-filled","frat","ping-pong"]},
+    {name:"spoon", verb:"spanked", "max":100, adjectives:["wooden","mixing","slotted"]}
   ];
   
   var position = ["over-the-knee", "diaper", "bent-over", "under-arm", "prone"];
@@ -85,7 +84,7 @@ var gamble = (function(){
     var state = pick(dress);
     
       document.getElementById("output").innerHTML = "You should be " +
-      impl.verb + " " + state + " " + random(minimum, maximum) +
+      impl.verb + " " + state + " " + random(minimum, impl.max) +
       " times in the " + pos + " position with a " +
       pick(impl.adjectives) + " " + impl.name;
   };
@@ -102,7 +101,7 @@ new one.)
     <div>
       <div class="post-meta">
         <span title="post date" class="post-info">2015-01-22</span>
-        <span title="last modification date" class="post-info">2015-01-23</span>
+        <span title="last modification date" class="post-info">2015-01-27</span>
         <span title="tags" class="post-info"><a href="/tags/spanking/">spanking</a>, <a href="/tags/script/">script</a></span>
         <span title="author" class="post-info">thingywhat</span>
       </div>
