@@ -19,6 +19,21 @@ How intense are you?
   <td><img src="/media/img/Pain3.png" style="width: 100%" /></td>
   <td><img src="/media/img/Pain4.png" style="width: 100%" /></td>
 </table>
+<div id="meter" />
+<style>
+#meter{
+  height: 3px;
+  width: 100%;
+  background: #48ff30; /* Old browsers */
+  background: -moz-linear-gradient(left, #48ff30 0%, #fff728 50%, #ff0000 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#48ff30), color-stop(50%,#fff728), color-stop(100%,#ff0000)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, #48ff30 0%,#fff728 50%,#ff0000 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, #48ff30 0%,#fff728 50%,#ff0000 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, #48ff30 0%,#fff728 50%,#ff0000 100%); /* IE10+ */
+  background: linear-gradient(to right, #48ff30 0%,#fff728 50%,#ff0000 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48ff30', endColorstr='#ff0000',GradientType=1 ); /* IE6-9 */
+}
+</style>
 <input style="width:100%" type="range" min="0" max="100" value="50" onchange="updatePic(value)" />
 
 #+END_HTML
