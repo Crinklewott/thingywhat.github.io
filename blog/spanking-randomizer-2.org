@@ -9,8 +9,7 @@
 #+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
 #+DESCRIPTION: Adding options to the spanking randomizer
 
-How intense are you?
-
+* How intense are you?
 #+BEGIN_HTML
 <table style="width:100%"><tr>
   <td><img src="/media/img/Pain0.png" style="width: 100%" /></td>
@@ -88,23 +87,28 @@ function spankMe(){
 <div id="intense" style="text-align: center;">That hurts!</div>
 #+END_HTML
 
+* Nastiness
 Do you want the randomizer to be particularly nasty?
 #+BEGIN_HTML
 <input type="radio" name="nasty" checked />NO!
 <input type="radio" name="nasty" id="nasty" />O-ok
 #+END_HTML
 
-Are you OK with being naked?
+* Nakedness
+Are you OK with being naked during the spanking?
 #+BEGIN_HTML
 <input type="radio" name="naked" id="naked" />Whatever
 <input type="radio" name="naked" />NO!
 #+END_HTML
 
+* Display?
 Display the spanking immediately?
 #+BEGIN_HTML
-<input type="checkbox" id="stop" />
+<input type="radio" name="show" id="show" />Sure
+<input type="radio" name="show" />Nah
 #+END_HTML
 
+* The moment of truth
 Alright! Are you ready for this?
 
 #+BEGIN_HTML
