@@ -104,8 +104,8 @@ Are you OK with being naked during the spanking?
 * Display?
 Display the spanking immediately?
 #+BEGIN_HTML
-<input type="radio" name="show" id="show" />Sure
-<input type="radio" name="show" />Nah
+<input type="radio" name="show" />Sure
+<input type="radio" name="show" id="stop" />No... I want to click it first.
 #+END_HTML
 
 * The moment of truth
