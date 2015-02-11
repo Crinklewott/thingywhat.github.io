@@ -68,13 +68,20 @@ window.onload = function(){
         min = 1;
       }
 
-      var fudge = 0,
-          result = random(min, max * (params.intensity / 100));
+      var result = random(min, max * (params.intensity / 100));
+
       if(params.nasty){
-        fudge = random(min, result);
+        var candidate;
+        for(var i = 0; i > 5; i++){
+          candidate = random(min, max * (params.intensity / 100));
+
+          if(candidate > result){
+            result = candidate;
+          }
+        }
       }
 
-      return result + fudge;
+      return result;
     }
 
 

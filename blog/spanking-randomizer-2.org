@@ -64,10 +64,49 @@ var blogpath = "/blog/2015/01/22/A%20script%20for%20daredevil%20butt-gamblers/#i
 
 function spankMe(){
     var slider = document.getElementById("slider");
+    var nasty = document.getElementById('nasty');
+    var naked = document.getElementById('naked');
+    var stop = document.getElementById('stop');
+
     var intensity = Math.floor(Math.pow((slider.value * 2), 2) / 100);
-    location.replace(blogpath + intensity);
+    var url = blogpath + intensity;
+    if(nasty.checked){
+      url += "&nasty=true";
+    }
+
+    if(!naked.checked){
+      url += "&naked=false";
+    }
+
+   if(stop.checked){
+     url += "&stop=true";
+   }
+
+    location.replace(url);
 }
 </script>
 <div id="intense" style="text-align: center;">That hurts!</div>
+#+END_HTML
+
+Do you want the randomizer to be particularly nasty?
+#+BEGIN_HTML
+<input type="radio" name="nasty" checked />NO!
+<input type="radio" name="nasty" id="nasty" />O-ok
+#+END_HTML
+
+Are you OK with being naked?
+#+BEGIN_HTML
+<input type="radio" name="naked" id="naked" />Whatever
+<input type="radio" name="naked" />NO!
+#+END_HTML
+
+Display the spanking immediately?
+#+BEGIN_HTML
+<input type="checkbox" id="stop" />
+#+END_HTML
+
+Alright! Are you ready for this?
+
+#+BEGIN_HTML
 <button onclick="spankMe()">Spank me!</button>
 #+END_HTML
