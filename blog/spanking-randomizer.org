@@ -36,8 +36,9 @@ Nobody except you:
   };
 
   window.onload = function(){
-    window.location.hash.replace(/([^#&=]+)=([^&]+)/g, function(a,key,val){
+    window.location.hash.slice(1).replace(/([^&=]+)=([^&]+)/g, function(a,key,val){
       params[key] = JSON.parse(val);
+      return a;
     });
 
     if(!params.stop){
