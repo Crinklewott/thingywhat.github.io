@@ -1,0 +1,17 @@
+#+TITLE:       A better butt-gambler
+#+AUTHOR:      thingywhat
+#+EMAIL:       thingywhat@Dee
+#+DATE:        2015-02-10 Tue
+#+URI:         /blog/%y/%m/%d/a-better-butt-gambler
+#+KEYWORDS:    spanking,script
+#+TAGS:        spanking,script
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: Adding options to the spanking randomizer
+
+How intense are you?
+
+#+BEGIN_HTML
+<input type="range" min="0" max="100" value="50" onchange="updatePic(value)" />
+
+#+END_HTML
