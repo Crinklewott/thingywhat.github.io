@@ -18,35 +18,34 @@ of spanking will you get? Nobody knows...
 Nobody except you:
 
 #+BEGIN_HTML
-  <pre id="output" style="word-break:normal;cursor:pointer;" onclick="gamble();"></pre>
-  <script type="text/javascript">
-  var params = {
-    'implement': [
-      {name:"hand", verb:"handspanked", "max":75, adjectives:false},
-      {name:"belt", verb:"belted", "max":50, adjectives:["leather"]},
-      {name:"cane", verb:"caned", "max":15, adjectives:["wicked","rattan","fierce"]},
-      {name:"switch", verb:"switched", "max":15, adjectives:false},
-      {name:"brush", verb:"spanked", "max":50, adjectives:["heavy","bath","hair","wooden"]},
-      {name:"paddle", verb:"paddled", "max":50, adjectives:["lexan","wooden","hole-filled","frat","ping-pong"]},
-      {name:"spoon", verb:"spanked", "max":50, adjectives:["wooden","mixing","slotted"]}
-    ],
-    'intense': 100,
-    'stop': false,
-    'nakedAllowed': true
-  };
+<pre id="output" style="word-break:normal;cursor:pointer;" onclick="gamble();"></pre>
+<script type="text/javascript">
+var params = {
+  'implement': [
+    {name:"hand", verb:"handspanked", "max":75, adjectives:false},
+    {name:"belt", verb:"belted", "max":50, adjectives:["leather"]},
+    {name:"cane", verb:"caned", "max":15, adjectives:["wicked","rattan","fierce"]},
+    {name:"switch", verb:"switched", "max":15, adjectives:false},
+    {name:"brush", verb:"spanked", "max":50, adjectives:["heavy","bath","hair","wooden"]},
+    {name:"paddle", verb:"paddled", "max":50, adjectives:["lexan","wooden","hole-filled","frat","ping-pong"]},
+    {name:"spoon", verb:"spanked", "max":50, adjectives:["wooden","mixing","slotted"]}
+  ],
+  'intense': 100,
+  'stop': false,
+  'nakedAllowed': true
+};
 
-  window.onload = function(){
-    window.location.hash.slice(1).replace(/([^&=]+)=([^&]+)/g, function(a,key,val){
-      params[key] = JSON.parse(val);
-      return a;
-    });
+window.onload = function(){
+  window.location.hash.slice(1).replace(/([^&=]+)=([^&]+)/g, function(a,key,val){
+    params[key] = JSON.parse(val);
+    return a;
+  });
 
-    if(!params.stop){
-      gamble();
-    }
-  };
+  if(!params.stop){
+    gamble();
+  }
 
-  var gamble = (function(){    
+  window.gamble = (function(){    
     var minimum = 10;
     var position = ["over-the-knee", "diaper", "bent-over", "under-arm", "prone"];
     var dress = ["over your pants", "on your underwear", "pantsless"];
@@ -89,7 +88,8 @@ Nobody except you:
         pick(impl.adjectives) + " " + impl.name : "");
     };
   })();
-  </script>
+};
+</script>
 #+END_HTML
 
 (If you can't do what it says, clicking the box above will generate a
