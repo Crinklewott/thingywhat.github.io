@@ -63,7 +63,7 @@ Nobody except you:
     ];
 
     function random(min, max){
-      if(max > 1){
+      if(max < 1){
         return "innumerable (smartass)";
       } if(min > max){
         min = 0;
