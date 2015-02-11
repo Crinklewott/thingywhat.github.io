@@ -81,6 +81,8 @@ window.onload = function(){
         }
       }
 
+      if(!result) result = 1;
+
       return result;
     }
 
