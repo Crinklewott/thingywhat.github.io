@@ -58,3 +58,9 @@ var updateSlider = function(){
 </script>
 <div id="intense" style="text-align: center;">That hurts!</pre>
 #+END_HTML
+
+Are you OK with nakedness?
+
+#+BEGIN_HTML
+<input type="checkbox" />
+#+END_HTML
