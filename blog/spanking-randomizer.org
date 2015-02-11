@@ -63,7 +63,7 @@ window.onload = function(){
       if(max < 1){
         return "innumerable (smartass)";
       } if(min > max){
-        min = 0;
+        min = 1;
       }
 
       return random(min, max * (params.intensity / 100));
