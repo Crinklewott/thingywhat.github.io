@@ -60,7 +60,7 @@ How intense are you?
 </style>
 <input style="width:100%; margin-left:0px;" type="range" min="0" max="100" value="50" onchange="updateSlider(value)" />
 <script>
-var updateSlider = function(){
+var updateSlider = (function(){
   var intense = [
     [0, "Don't hurt me! ;_;"],
     [8, "Be gentle"],
@@ -78,7 +78,7 @@ var updateSlider = function(){
       return x[0] > y[0] ? x : y;
     })[1];
   }
-}
+})();
 </script>
 <div id="intense" style="text-align: center;">That hurts!</pre>
 
