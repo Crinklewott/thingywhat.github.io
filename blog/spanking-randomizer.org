@@ -77,7 +77,7 @@ Nobody except you:
     }
 
     return function(){
-      var impl = pick(implement);
+      var impl = pick(params.implement);
       var pos = pick(position);
       var state = pick(dress);
       
