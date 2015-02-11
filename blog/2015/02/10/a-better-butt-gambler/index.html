@@ -61,22 +61,24 @@ How intense are you?
 <input style="width:100%; margin-left:0px;" type="range" min="0" max="100" value="50" onchange="updateSlider(value)" />
 <script>
 var updateSlider = (function(){
-  var intense = [
-    [0, "Don't hurt me! ;_;"],
-    [8, "Be gentle"],
-    [28, "That stings a bit"],
-    [50, "That hurts!"],
-    [71, "YEOWCH!!"],
-    [91, "WAAAAAHHHH!!!"],
-    [100, "Hell hath no fury"]
-  ];
+  var intense = {
+    0: "Don't hurt me! ;_;",
+    8: "Be gentle",
+    28: "That stings a bit",
+    50: "That hurts!",
+    71: "YEOWCH!!",
+    91: "WAAAAAHHHH!!!",
+    100: "Hell hath no fury"
+  };
 
   return function(intensity){
-    document.getElementById("intense").innerHTML = intense.filter(function(x){
-      return x[0] < intensity;
-    }).reduce(function(x, y){
-      return x[0] > y[0] ? x : y;
-    })[1];
+    var candidate = 0;
+    for(var i in intense){
+      if(i <= intensity && i > candidate)
+       candidate = i;
+    }
+
+    document.getElementById("intense").innerHTML = intense[candidate];
   }
 })();
 </script>
