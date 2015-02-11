@@ -59,7 +59,29 @@ How intense are you?
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48ff30', endColorstr='#ff0000',GradientType=1 ); /* IE6-9 */
 }
 </style>
-<input style="width:100%; margin:0px;" type="range" min="0" max="100" value="50" onchange="updatePic(value)" />
+<input style="width:100%; margin:0px;" type="range" min="0" max="100" value="50" onchange="updateSlider(value)" />
+<script>
+var updateSlider = function(){
+  var intense = [
+    [0, "Don't hurt me! ;_;"],
+    [8, "Be gentle"],
+    [28, "That stings a bit"],
+    [50, "That hurts!"],
+    [71, "YEOWCH!!"],
+    [91, "WAAAAAHHHH!!!"],
+    [100, "Hell hath no fury"]
+  ];
+
+  return function(intensity){
+    document.getElementById("intense").innerHTML = intense.filter(function(x){
+      return x[0] < 10;
+    }).reduce(function(x, y){
+      return x[0] > y[0] ? x : y;
+    })[1];
+  }
+}
+</script>
+<div id="intense" style="text-align: center;">That hurts!</pre>
 
 </div>
 </div>
