@@ -94,7 +94,7 @@ window.onload = function(){
         min = 0;
       }
 
-      return random(min, max * param.intensity / 100);
+      return random(min, max * (param.intensity / 100));
     }
 
 
@@ -120,6 +120,8 @@ window.onload = function(){
 
   if(!params.stop){
     gamble();
+  } else {
+    document.getElementById("output").innerHTML = "Click to see!";
   }
 };
 </script>
