@@ -18,55 +18,76 @@ of spanking will you get? Nobody knows...
 Nobody except you:
 
 #+BEGIN_HTML
-<pre id="output" style="word-break:normal;cursor:pointer;" onclick="gamble();"></pre>
-<script type="text/javascript">
-window.onload = function(){
-  gamble();
-};
-
-var gamble = (function(){
-  var minimum = 10;
-
-  var implement = [
-    {name:"hand", verb:"handspanked", "max":75, adjectives:false},
-    {name:"belt", verb:"belted", "max":50, adjectives:["leather"]},
-    {name:"cane", verb:"caned", "max":15, adjectives:["wicked","rattan","fierce"]},
-    {name:"switch", verb:"switched", "max":15, adjectives:false},
-    {name:"brush", verb:"spanked", "max":50, adjectives:["heavy","bath","hair","wooden"]},
-    {name:"paddle", verb:"paddled", "max":50, adjectives:["lexan","wooden","hole-filled","frat","ping-pong"]},
-    {name:"spoon", verb:"spanked", "max":50, adjectives:["wooden","mixing","slotted"]}
-  ];
-  
-  var position = ["over-the-knee", "diaper", "bent-over", "under-arm", "prone"];
-  
-  var dress = ["over your pants", "on your underwear", "pantsless", "naked"];
-  
-  var statement = ["You should be",
-                   "It's time to be",
-                   "You'd better be ready to be",
-                   "You're gonna get",
-                   "You will be",
-                   "You're gonna be"];
-
-  function random(min, max){
-    return min + Math.floor(Math.random() * (max - min));
-  }
-  function pick(array){
-    return array[random(0, array.length)];
-  }
-
-  return function(){
-    var impl = pick(implement);
-    var pos = pick(position);
-    var state = pick(dress);
-    
-      document.getElementById("output").innerHTML = pick(statement) + " " +
-      impl.verb + " " + state + " " + random(minimum, impl.max) +
-      " times in the " + pos + " position" + (impl.adjectives ? " with a " +
-      pick(impl.adjectives) + " " + impl.name : "");
+  <pre id="output" style="word-break:normal;cursor:pointer;" onclick="gamble();"></pre>
+  <script type="text/javascript">
+  var params = {
+    'implement': [
+      {name:"hand", verb:"handspanked", "max":75, adjectives:false},
+      {name:"belt", verb:"belted", "max":50, adjectives:["leather"]},
+      {name:"cane", verb:"caned", "max":15, adjectives:["wicked","rattan","fierce"]},
+      {name:"switch", verb:"switched", "max":15, adjectives:false},
+      {name:"brush", verb:"spanked", "max":50, adjectives:["heavy","bath","hair","wooden"]},
+      {name:"paddle", verb:"paddled", "max":50, adjectives:["lexan","wooden","hole-filled","frat","ping-pong"]},
+      {name:"spoon", verb:"spanked", "max":50, adjectives:["wooden","mixing","slotted"]}
+    ],
+    'intense': 100,
+    'stop': false,
+    'nakedAllowed': true
   };
-})();
-</script>
+
+  window.onload = function(){
+    window.location.hash.replace(/([^#&=]+)=([^&]+)/g, function(a,key,val){
+      params[key] = JSON.parse(val);
+    });
+
+    if(!params.stop){
+      gamble();
+    }
+  };
+
+  var gamble = (function(){    
+    var position = ["over-the-knee", "diaper", "bent-over", "under-arm", "prone"];
+    var dress = ["over your pants", "on your underwear", "pantsless"];
+
+    if(params.nakedAllowed){
+      dress.push("naked");
+    }
+    
+    var statement = [
+      "You should be",
+      "It's time to be",
+      "You'd better be ready to be",
+      "You're gonna get",
+      "You will be",
+      "You're gonna be"
+    ];
+
+    function random(min, max){
+      if(max > 1){
+        return "innumerable (smartass)";
+      } if(min > max){
+        min = 0;
+      }
+
+      return min + Math.floor(Math.random() * (max - min));
+    }
+
+    function pick(array){
+      return array[random(0, array.length)];
+    }
+
+    return function(){
+      var impl = pick(implement);
+      var pos = pick(position);
+      var state = pick(dress);
+      
+        document.getElementById("output").innerHTML = pick(statement) + " " +
+        impl.verb + " " + state + " " + random(minimum, impl.max) +
+        " times in the " + pos + " position" + (impl.adjectives ? " with a " +
+        pick(impl.adjectives) + " " + impl.name : "");
+    };
+  })();
+  </script>
 #+END_HTML
 
 (If you can't do what it says, clicking the box above will generate a
