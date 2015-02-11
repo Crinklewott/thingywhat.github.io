@@ -69,10 +69,6 @@ window.onload = function(){
     return a;
   });
 
-  if(!params.stop){
-    gamble();
-  }
-
   window.gamble = (function(){    
     var minimum = 10;
     var position = ["over-the-knee", "diaper", "bent-over", "under-arm", "prone"];
@@ -116,6 +112,10 @@ window.onload = function(){
         pick(impl.adjectives) + " " + impl.name : "");
     };
   })();
+
+  if(!params.stop){
+    gamble();
+  }
 };
 </script>
 
