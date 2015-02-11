@@ -13,11 +13,11 @@ How intense are you?
 
 #+BEGIN_HTML
 <table style="width:100%"><tr>
-  <td><img src="/media/img/Pain0.png" /></td>
-  <td><img src="/media/img/Pain1.png" /></td>
-  <td><img src="/media/img/Pain2.png" /></td>
-  <td><img src="/media/img/Pain3.png" /></td>
-  <td><img src="/media/img/Pain4.png" /></td>
+  <td><img src="/media/img/Pain0.png" style="width: 100%" /></td>
+  <td><img src="/media/img/Pain1.png" style="width: 100%" /></td>
+  <td><img src="/media/img/Pain2.png" style="width: 100%" /></td>
+  <td><img src="/media/img/Pain3.png" style="width: 100%" /></td>
+  <td><img src="/media/img/Pain4.png" style="width: 100%" /></td>
 </table>
 <input style="width:100%" type="range" min="0" max="100" value="50" onchange="updatePic(value)" />
 
