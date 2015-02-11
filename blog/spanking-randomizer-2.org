@@ -34,7 +34,7 @@ How intense are you?
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48ff30', endColorstr='#ff0000',GradientType=1 ); /* IE6-9 */
 }
 </style>
-<input style="width:100%; margin-left:0px;" type="range" min="0" max="100" value="50" oninput="updateSlider(value)" />
+<input id="slider" style="width:100%; margin-left:0px;" type="range" min="0" max="100" value="50" oninput="updateSlider(value)" />
 <script>
 var updateSlider = (function(){
   var intense = {
@@ -56,10 +56,18 @@ var updateSlider = (function(){
          candidate = i;
       }
     }
-
     document.getElementById("intense").innerHTML = intense[candidate];
   }
 })();
+
+var blogpath = "/blog/2015/01/22/A%20script%20for%20daredevil%20butt-gamblers/#intensity=";
+
+function spankMe(){
+    var slider = document.getElementById("slider");
+    var intensity = Math.pow((slider.value * 2), 2) / 100;
+    location.replace(blogpath + intensity);
+}
 </script>
 <div id="intense" style="text-align: center;">That hurts!</pre>
+<button onclick="spankme()">Spank me!</button>
 #+END_HTML
