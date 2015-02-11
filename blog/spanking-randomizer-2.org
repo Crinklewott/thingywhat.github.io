@@ -19,7 +19,7 @@ How intense are you?
   <td><img src="/media/img/Pain3.png" style="width: 100%" /></td>
   <td><img src="/media/img/Pain4.png" style="width: 100%" /></td>
 </table>
-<div id="meter" />
+<div id="meter"></div>
 <style>
 #meter{
   height: 3px;
