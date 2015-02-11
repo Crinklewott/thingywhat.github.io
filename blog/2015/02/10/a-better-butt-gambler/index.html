@@ -74,7 +74,7 @@ var updateSlider = (function(){
   return function(intensity){
     var candidate = 0;
     for(var i in intense){
-      if(!isNaN(i) && i <= intensity && i > candidate)
+      if(!isNaN(i) && i <= parseInt(intensity) && i > candidate)
        candidate = i;
     }
 
