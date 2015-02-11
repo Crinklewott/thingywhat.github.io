@@ -33,7 +33,7 @@ var params = {
   'intensity': 100,
   'stop': false,
   'naked': true,
-  'nasty': false;
+  'nasty': false
 };
 
 window.onload = function(){
