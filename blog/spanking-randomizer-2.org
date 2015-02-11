@@ -1,4 +1,4 @@
-#+TITLE:       A better butt-gambler
+#+TITLE:       Spanking Randomizer settings
 #+AUTHOR:      thingywhat
 #+EMAIL:       thingywhat@Dee
 #+DATE:        2015-02-10 Tue
