@@ -30,9 +30,9 @@ var params = {
     {name:"paddle", verb:"paddled", "max":50, adjectives:["lexan","wooden","hole-filled","frat","ping-pong"]},
     {name:"spoon", verb:"spanked", "max":50, adjectives:["wooden","mixing","slotted"]}
   ],
-  'intense': 100,
+  'intensity': 100,
   'stop': false,
-  'nakedAllowed': true
+  'naked': true
 };
 
 window.onload = function(){
@@ -46,7 +46,7 @@ window.onload = function(){
     var position = ["over-the-knee", "diaper", "bent-over", "under-arm", "prone"];
     var dress = ["over your pants", "on your underwear", "pantsless"];
 
-    if(params.nakedAllowed){
+    if(params.naked){
       dress.push("naked");
     }
     
@@ -59,13 +59,18 @@ window.onload = function(){
       "You're gonna be"
     ];
 
-    function random(min, max){
+    function adjustedRandom(min, max){
       if(max < 1){
         return "innumerable (smartass)";
       } if(min > max){
         min = 0;
       }
 
+      return random(min, max * param.intensity / 100);
+    }
+
+
+    function random(min, max){
       return min + Math.floor(Math.random() * (max - min));
     }
 
@@ -79,7 +84,7 @@ window.onload = function(){
       var state = pick(dress);
       
         document.getElementById("output").innerHTML = pick(statement) + " " +
-        impl.verb + " " + state + " " + random(minimum, impl.max) +
+        impl.verb + " " + state + " " + adjustedRandom(minimum, impl.max) +
         " times in the " + pos + " position" + (impl.adjectives ? " with a " +
         pick(impl.adjectives) + " " + impl.name : "");
     };
