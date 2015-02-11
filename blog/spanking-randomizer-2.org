@@ -38,20 +38,23 @@ How intense are you?
 <script>
 var updateSlider = (function(){
   var intense = {
-    0: "Don't hurt me! ;_;",
-    8: "Be gentle",
-    28: "That stings a bit",
-    50: "That hurts!",
-    71: "YEOWCH!!",
-    91: "WAAAAAHHHH!!!",
-    100: "Hell hath no fury"
+    "0": "Don't hurt me! ;_;",
+    "8": "Be gentle",
+    "28": "That stings a bit",
+    "50": "That hurts!",
+    "71": "YEOWCH!!",
+    "91": "WAAAAAHHHH!!!",
+    "100": "Hell hath no fury"
   };
 
   return function(intensity){
     var candidate = 0;
     for(var i in intense){
-      if(!isNaN(i) && i <= parseInt(intensity) && i > candidate)
-       candidate = i;
+      if(!isNaN(i)){
+        i = parseInt(i);
+        if( && i <= parseInt(intensity) && i > candidate)
+         candidate = i;
+      }
     }
 
     document.getElementById("intense").innerHTML = intense[candidate];
