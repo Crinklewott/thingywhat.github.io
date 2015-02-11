@@ -88,11 +88,50 @@ var blogpath = "/blog/2015/01/22/A%20script%20for%20daredevil%20butt-gamblers/#i
 
 function spankMe(){
     var slider = document.getElementById("slider");
+    var nasty = document.getElementById('nasty');
+    var naked = document.getElementById('naked');
+    var stop = document.getElementById('stop');
+
     var intensity = Math.floor(Math.pow((slider.value * 2), 2) / 100);
-    location.replace(blogpath + intensity);
+    var url = blogpath + intensity;
+    if(nasty.checked){
+      url += "&nasty=true";
+    }
+
+    if(!naked.checked){
+      url += "&naked=false";
+    }
+
+   if(stop.checked){
+     url += "&stop=true";
+   }
+
+    location.replace(url);
 }
 </script>
 <div id="intense" style="text-align: center;">That hurts!</div>
+
+<p>
+Do you want the randomizer to be particularly nasty?
+</p>
+<input type="radio" name="nasty" checked />NO!
+<input type="radio" name="nasty" id="nasty" />O-ok
+
+<p>
+Are you OK with being naked?
+</p>
+<input type="radio" name="naked" id="naked" />Whatever
+<input type="radio" name="naked" />NO!
+
+<p>
+Display the spanking immediately?
+</p>
+<input type="checkbox" id="stop" />
+
+<p>
+Alright! Are you ready for this?
+</p>
+
 <button onclick="spankMe()">Spank me!</button>
 
 </div>
@@ -100,7 +139,7 @@ function spankMe(){
     <div>
       <div class="post-meta">
         <span title="post date" class="post-info">2015-02-10</span>
-        <span title="last modification date" class="post-info">2015-02-10</span>
+        <span title="last modification date" class="post-info">2015-02-11</span>
         <span title="tags" class="post-info"><a href="/tags/spanking/">spanking</a>, <a href="/tags/script/">script</a></span>
         <span title="author" class="post-info">thingywhat</span>
       </div>
