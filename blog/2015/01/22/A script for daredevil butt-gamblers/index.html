@@ -60,7 +60,8 @@ var params = {
   ],
   'intensity': 100,
   'stop': false,
-  'naked': true
+  'naked': true,
+  'nasty': false;
 };
 
 window.onload = function(){
@@ -71,6 +72,7 @@ window.onload = function(){
 
   window.gamble = (function(){    
     var minimum = 10;
+
     var position = ["over-the-knee", "diaper", "bent-over", "under-arm", "prone"];
     var dress = ["over your pants", "on your underwear", "pantsless"];
 
@@ -94,7 +96,13 @@ window.onload = function(){
         min = 1;
       }
 
-      return random(min, max * (params.intensity / 100));
+      var fudge = 0,
+          result = random(min, max * (params.intensity / 100));
+      if(params.nasty){
+        fudge = random(min, result);
+      }
+
+      return result + fudge;
     }
 
 
