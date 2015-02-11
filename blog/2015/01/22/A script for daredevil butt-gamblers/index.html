@@ -48,14 +48,8 @@ Nobody except you:
 
 <pre id="output" style="word-break:normal;cursor:pointer;" onclick="gamble();"></pre>
 <script type="text/javascript">
-window.onload = function(){
-  gamble();
-};
-
-var gamble = (function(){
-  var minimum = 10;
-
-  var implement = [
+var params = {
+  'implement': [
     {name:"hand", verb:"handspanked", "max":75, adjectives:false},
     {name:"belt", verb:"belted", "max":50, adjectives:["leather"]},
     {name:"cane", verb:"caned", "max":15, adjectives:["wicked","rattan","fierce"]},
@@ -63,22 +57,49 @@ var gamble = (function(){
     {name:"brush", verb:"spanked", "max":50, adjectives:["heavy","bath","hair","wooden"]},
     {name:"paddle", verb:"paddled", "max":50, adjectives:["lexan","wooden","hole-filled","frat","ping-pong"]},
     {name:"spoon", verb:"spanked", "max":50, adjectives:["wooden","mixing","slotted"]}
-  ];
-  
+  ],
+  'intense': 100,
+  'stop': false,
+  'nakedAllowed': true
+};
+
+window.onload = function(){
+  window.location.hash.replace(/([^#&=]+)=([^&]+)/g, function(a,key,val){
+    params[key] = JSON.parse(val);
+  });
+
+  if(!params.stop){
+    gamble();
+  }
+};
+
+var gamble = (function(){    
   var position = ["over-the-knee", "diaper", "bent-over", "under-arm", "prone"];
+  var dress = ["over your pants", "on your underwear", "pantsless"];
+
+  if(params.nakedAllowed){
+    dress.push("naked");
+  }
   
-  var dress = ["over your pants", "on your underwear", "pantsless", "naked"];
-  
-  var statement = ["You should be",
-                   "It's time to be",
-                   "You'd better be ready to be",
-                   "You're gonna get",
-                   "You will be",
-                   "You're gonna be"];
+  var statement = [
+    "You should be",
+    "It's time to be",
+    "You'd better be ready to be",
+    "You're gonna get",
+    "You will be",
+    "You're gonna be"
+  ];
 
   function random(min, max){
+    if(max > 1){
+      return "innumerable (smartass)";
+    } if(min > max){
+      min = 0;
+    }
+
     return min + Math.floor(Math.random() * (max - min));
   }
+
   function pick(array){
     return array[random(0, array.length)];
   }
@@ -106,7 +127,7 @@ new one.)
     <div>
       <div class="post-meta">
         <span title="post date" class="post-info">2015-01-22</span>
-        <span title="last modification date" class="post-info">2015-02-06</span>
+        <span title="last modification date" class="post-info">2015-02-10</span>
         <span title="tags" class="post-info"><a href="/tags/spanking/">spanking</a>, <a href="/tags/script/">script</a></span>
         <span title="author" class="post-info">thingywhat</span>
       </div>
