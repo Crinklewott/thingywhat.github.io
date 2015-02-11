@@ -88,7 +88,7 @@ var blogpath = "/blog/2015/01/22/A%20script%20for%20daredevil%20butt-gamblers/#i
 
 function spankMe(){
     var slider = document.getElementById("slider");
-    var intensity = Math.pow((slider.value * 2), 2) / 100;
+    var intensity = Math.floor(Math.pow((slider.value * 2), 2) / 100);
     location.replace(blogpath + intensity);
 }
 </script>
