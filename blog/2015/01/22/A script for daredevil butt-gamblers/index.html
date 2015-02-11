@@ -72,51 +72,51 @@ window.onload = function(){
   if(!params.stop){
     gamble();
   }
-};
 
-var gamble = (function(){    
-  var minimum = 10;
-  var position = ["over-the-knee", "diaper", "bent-over", "under-arm", "prone"];
-  var dress = ["over your pants", "on your underwear", "pantsless"];
+  window.gamble = (function(){    
+    var minimum = 10;
+    var position = ["over-the-knee", "diaper", "bent-over", "under-arm", "prone"];
+    var dress = ["over your pants", "on your underwear", "pantsless"];
 
-  if(params.nakedAllowed){
-    dress.push("naked");
-  }
-  
-  var statement = [
-    "You should be",
-    "It's time to be",
-    "You'd better be ready to be",
-    "You're gonna get",
-    "You will be",
-    "You're gonna be"
-  ];
+    if(params.nakedAllowed){
+      dress.push("naked");
+    }
+    
+    var statement = [
+      "You should be",
+      "It's time to be",
+      "You'd better be ready to be",
+      "You're gonna get",
+      "You will be",
+      "You're gonna be"
+    ];
 
-  function random(min, max){
-    if(max < 1){
-      return "innumerable (smartass)";
-    } if(min > max){
-      min = 0;
+    function random(min, max){
+      if(max < 1){
+        return "innumerable (smartass)";
+      } if(min > max){
+        min = 0;
+      }
+
+      return min + Math.floor(Math.random() * (max - min));
     }
 
-    return min + Math.floor(Math.random() * (max - min));
-  }
+    function pick(array){
+      return array[random(0, array.length)];
+    }
 
-  function pick(array){
-    return array[random(0, array.length)];
-  }
-
-  return function(){
-    var impl = pick(params.implement);
-    var pos = pick(position);
-    var state = pick(dress);
-    
-      document.getElementById("output").innerHTML = pick(statement) + " " +
-      impl.verb + " " + state + " " + random(minimum, impl.max) +
-      " times in the " + pos + " position" + (impl.adjectives ? " with a " +
-      pick(impl.adjectives) + " " + impl.name : "");
-  };
-})();
+    return function(){
+      var impl = pick(params.implement);
+      var pos = pick(position);
+      var state = pick(dress);
+      
+        document.getElementById("output").innerHTML = pick(statement) + " " +
+        impl.verb + " " + state + " " + random(minimum, impl.max) +
+        " times in the " + pos + " position" + (impl.adjectives ? " with a " +
+        pick(impl.adjectives) + " " + impl.name : "");
+    };
+  })();
+};
 </script>
 
 <p>
