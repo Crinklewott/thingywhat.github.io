@@ -97,14 +97,14 @@ Do you want the randomizer to be particularly nasty?
 * Nakedness
 Are you OK with being naked during the spanking?
 #+BEGIN_HTML
-<input type="radio" name="naked" id="naked" />Whatever
+<input type="radio" name="naked" id="naked" checked/>It doesn't matter
 <input type="radio" name="naked" />NO!
 #+END_HTML
 
 * Display?
 Display the spanking immediately?
 #+BEGIN_HTML
-<input type="radio" name="show" />Sure
+<input type="radio" name="show" checked />Sure
 <input type="radio" name="show" id="stop" />No... I want to click it first.
 #+END_HTML
 
