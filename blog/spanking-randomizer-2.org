@@ -9,7 +9,7 @@
 #+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
 #+DESCRIPTION: Adding options to the spanking randomizer
 
-So, if you like the idea behind the [[/blog/2015/01/22/A%20script%20for%20daredevil%20butt-gamblers/][spanking randomizer]], but really
+So, if you like the idea behind the [[http://thingywhat.github.io/blog/2015/01/22/A%20script%20for%20daredevil%20butt-gamblers/][spanking randomizer]], but really
 hope for a few tweaks, you are in luck; This page is a way for you to
 do just that..!
 
