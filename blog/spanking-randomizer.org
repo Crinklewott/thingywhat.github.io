@@ -33,6 +33,7 @@ var params = {
   'intensity': 100,
   'stop': false,
   'naked': true,
+  'bare': true,
   'nasty': false
 };
 
@@ -46,12 +47,15 @@ window.onload = function(){
     var minimum = 10;
 
     var position = ["over-the-knee", "diaper", "bent-over", "under-arm", "prone"];
-    var dress = ["over your pants", "on your underwear", "pantsless", "on your bare-bottom"];
+    var dress = ["over your pants", "on your underwear", "pantsless"];
 
     if(params.naked){
       dress.push("naked");
     }
-    
+    if(params.bare){
+      dress.push("on your bare-bottom");
+    }
+
     var statement = [
       "You should be",
       "It's time to be",
