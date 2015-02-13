@@ -49,11 +49,15 @@ var updateSlider = (function(){
   var intense = {
     "0": "Don't hurt me! ;_;",
     "8": "Be gentle",
-    "28": "That stings a bit",
-    "50": "That hurts!",
-    "71": "YEOWCH!!",
+    "18": "That stings a bit"
+    "28": "Ow",
+    "48": "That hurts!",
+    "50": "Ouch!",
+    "60": "Yikes!!"
+    "71": "GAH!",
+    "81": "YEOWCH!!",
     "91": "WAAAAAHHHH!!!",
-    "100": "Hell hath no fury"
+    "100": "Hell hath no fury!"
   };
 
   return function(intensity){
