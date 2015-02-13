@@ -103,11 +103,13 @@ window.onload = function(){
       var impl = pick(params.implement);
       var pos = pick(position);
       var state = pick(dress);
-      
+      var swats = adjustedRandom(minimum, impl.max); 
+
         document.getElementById("output").innerHTML = pick(statement) + " " +
-        impl.verb + " " + state + " " + adjustedRandom(minimum, impl.max) +
-        " times in the " + pos + " position" + (impl.adjectives ? " with a " +
-        pick(impl.adjectives) + " " + impl.name : "");
+        impl.verb + " " + state + " " + swats + " time" +
+        (swats > 1 ? "s" : "") + " in the " + pos + " position" +
+        (impl.adjectives ? " with a " + pick(impl.adjectives) + " " +
+        impl.name : "");
     };
   })();
 
