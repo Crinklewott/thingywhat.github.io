@@ -73,8 +73,6 @@ var updateSlider = (function(){
   }
 })();
 
-updateSlider(document.getElementById('slider').value);
-
 var blogpath = "/blog/2015/01/22/A%20script%20for%20daredevil%20butt-gamblers/#intensity=";
 
 function spankMe(){
@@ -104,6 +102,8 @@ function spankMe(){
 
    window.location.href = url;
 }
+
+updateSlider(document.getElementById('slider').value);
 </script>
 <div id="intense" style="text-align: center;">Ouch!</div>
 #+END_HTML
