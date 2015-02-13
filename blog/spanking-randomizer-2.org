@@ -119,7 +119,7 @@ Are you OK with being naked during the spanking?
 
 #+BEGIN_HTML
 <style>
-#naked[checked] ~ #bare{
+#naked:checked ~ #bare{
   display: none;
 }
 </style>
