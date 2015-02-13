@@ -98,7 +98,7 @@ function spankMe(){
     location.replace(url);
 }
 </script>
-<div id="intense" style="text-align: center;">That hurts!</div>
+<div id="intense" style="text-align: center;">Ouch!</div>
 #+END_HTML
 
 * Nastiness
