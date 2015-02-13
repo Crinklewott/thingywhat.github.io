@@ -117,6 +117,19 @@ Are you OK with being naked during the spanking?
 <input type="radio" name="naked" />NO!
 #+END_HTML
 
+#+BEGIN_HTML
+<style>
+#naked[checked] + #bare{
+  display: none;
+}
+</style>
+<p>Is bare-bottom spanking allowed at least?</p>
+<div id="bare">
+  <input type="radio" name="bare" id="bare" checked/>...fine
+  <input type="radio" name="bare" />NO!
+</div>
+#+END_HTML
+
 * Display?
 Display the spanking immediately? Or should we wait until you click
 the randomizer to generate something?
