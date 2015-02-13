@@ -74,6 +74,7 @@ spankings, but does not necessarily guarantee it.
 }
 </style>
 <input id="slider" style="width:100%; margin-left:0px;" type="range" min="0" max="100" value="50" oninput="updateSlider(value)" />
+<div id="intense" style="text-align: center;">Ouch!</div>
 <script>
 var updateSlider = (function(){
   var intense = {
@@ -102,6 +103,8 @@ var updateSlider = (function(){
     document.getElementById("intense").innerHTML = intense[candidate];
   }
 })();
+
+updateSlider(document.getElementById('slider').value);
 
 var blogpath = "/blog/2015/01/22/A%20script%20for%20daredevil%20butt-gamblers/#intensity=";
 
@@ -132,10 +135,7 @@ function spankMe(){
 
    window.location.href = url;
 }
-
-updateSlider(document.getElementById('slider').value);
 </script>
-<div id="intense" style="text-align: center;">Ouch!</div>
 </div>
 </div>
 
