@@ -53,7 +53,7 @@ var updateSlider = (function(){
     "28": "Ow",
     "48": "That hurts!",
     "50": "Ouch!",
-    "60": "Yikes!!"
+    "60": "Yikes!!",
     "71": "GAH!",
     "81": "YEOWCH!!",
     "91": "WAAAAAHHHH!!!",
