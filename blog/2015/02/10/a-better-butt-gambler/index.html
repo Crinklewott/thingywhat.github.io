@@ -110,6 +110,7 @@ function spankMe(){
     var nasty = document.getElementById('nasty');
     var naked = document.getElementById('naked');
     var stop = document.getElementById('stop');
+    var barebottom = document.getElementById('barebottom');
 
     var intensity = Math.floor(Math.pow((slider.value * 2), 2) / 100);
     var url = blogpath + intensity;
@@ -123,6 +124,10 @@ function spankMe(){
 
    if(stop.checked){
      url += "&stop=true";
+   }
+
+   if(!barebottom.checked){
+     url += "&bare=false";
    }
 
     location.replace(url);
@@ -158,11 +163,14 @@ Are you OK with being naked during the spanking?
 #naked:checked ~ #bare{
   display: none;
 }
+#bare{
+  padding-top: 20px;
+}
 </style>
 <div id="bare">
   <p>Is bare-bottom spanking allowed at least?</p>
-  <input type="radio" name="bare" id="bare" checked/>...fine
-  <input type="radio" name="bare" />NO!
+  <input type="radio" name="barebottom" id="barebottom" checked/>...fine
+  <input type="radio" name="barebottom" />NO!
 </div>
 </div>
 </div>
