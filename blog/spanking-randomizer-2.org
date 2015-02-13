@@ -9,7 +9,17 @@
 #+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
 #+DESCRIPTION: Adding options to the spanking randomizer
 
+So, if you like the idea behind the [[file:./spanking-randomizer.org][spanking randomizer]], but really
+hope for a few tweaks, you are in luck; This page is a way for you to
+do just that..!
+
+Below are a number of options, and after you have set them as you see
+fit, click "Spank me!" at the bottom.
+
 * How intense are you?
+How much heat can you take? Higher means a chance for a LOT more
+spankings, but does not necessarily guarantee it.
+
 #+BEGIN_HTML
 <table style="width:100%"><tr>
   <td><img src="/media/img/Pain0.png" style="width: 100%" /></td>
@@ -88,7 +98,9 @@ function spankMe(){
 #+END_HTML
 
 * Nastiness
-Do you want the randomizer to be particularly nasty?
+Do you want the randomizer to be particularly nasty? Yes means that it
+is going to be *much* more likely to pick higher numbers of slaps for
+your spanking.
 #+BEGIN_HTML
 <input type="radio" name="nasty" checked />NO!
 <input type="radio" name="nasty" id="nasty" />O-ok
@@ -102,14 +114,17 @@ Are you OK with being naked during the spanking?
 #+END_HTML
 
 * Display?
-Display the spanking immediately?
+Display the spanking immediately? Or should we wait until you click
+the randomizer to generate something?
 #+BEGIN_HTML
 <input type="radio" name="show" checked />Sure
 <input type="radio" name="show" id="stop" />No... I want to click it first.
 #+END_HTML
 
 * The moment of truth
-Alright! Are you ready for this?
+Alright! Are you ready for this? If you have set everything to your
+liking, clicking below will generate a spanking taking all of the
+above into consideration. Tread lightly!
 
 #+BEGIN_HTML
 <button onclick="spankMe()">Spank me!</button>
