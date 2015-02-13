@@ -100,7 +100,7 @@ function spankMe(){
      url += "&bare=false";
    }
 
-    location.replace(url);
+   window.location.href = url;
 }
 </script>
 <div id="intense" style="text-align: center;">Ouch!</div>
