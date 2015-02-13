@@ -109,7 +109,8 @@ function spankMe(){
 * Nastiness
 Do you want the randomizer to be particularly nasty? Yes means that it
 is going to be *much* more likely to pick higher numbers of slaps for
-your spanking.
+your spanking. (Note: This won't increase the maximum amount of
+spankings you can get, just sway the odds.)
 #+BEGIN_HTML
 <input type="radio" name="nasty" checked />NO!
 <input type="radio" name="nasty" id="nasty" />O-ok
