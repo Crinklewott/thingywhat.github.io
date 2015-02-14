@@ -125,4 +125,4 @@ window.onload = function(){
 (If you can't do what it says, clicking the box above will generate a
 new one.)
 
-Want to tweak the randomizer? Have some [[http://thingywhat.github.io/blog/2015/01/22/A%20script%20for%20daredevil%20butt-gamblers/][customization options!]]
+Want to tweak the randomizer? Have some [[http://thingywhat.github.io/blog/2015/02/10/a-better-butt-gambler/][customization options!]]
