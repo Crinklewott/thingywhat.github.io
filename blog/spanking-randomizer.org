@@ -22,10 +22,10 @@ Nobody except you:
 <script type="text/javascript">
 var params = {
   'implement': [
-    {name:"hand", verb:"handspanked", "max":75, adjectives:false},
+    {name:"hand", verb:"handspanked", "max":75},
+    {name:"switch", verb:"switched", "max":15},
     {name:"belt", verb:"belted", "max":50, adjectives:["leather"]},
     {name:"cane", verb:"caned", "max":15, adjectives:["wicked","rattan","fierce"]},
-    {name:"switch", verb:"switched", "max":15, adjectives:false},
     {name:"brush", verb:"spanked", "max":50, adjectives:["heavy","bath","hair","wooden"]},
     {name:"paddle", verb:"paddled", "max":50, adjectives:["lexan","wooden","hole-filled","frat","ping-pong"]},
     {name:"spoon", verb:"spanked", "max":50, adjectives:["wooden","mixing","slotted"]}
