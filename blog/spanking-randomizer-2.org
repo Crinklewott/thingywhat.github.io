@@ -151,7 +151,10 @@ Are you OK with being naked during the spanking?
 #+END_HTML
 
 * Switching it up
-Do you want to switch up the spanking partway through?
+Do you want to switch up the spanking partway through? This means that
+your butt gets a little break as you switch positions and implements,
+but we make up by slightly increasing the overall spankings you will
+get.
 #+BEGIN_HTML
 <input type="radio" name="switch" id="same" checked/>Nah
 <input type="radio" name="switch" />Let's do it!
