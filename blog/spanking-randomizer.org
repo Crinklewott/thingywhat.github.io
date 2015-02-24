@@ -117,7 +117,7 @@ window.onload = function(){
           impl.name : "");
         }
 
-        document.getElementById("output").innerHTML =
+        document.getElementById("output").innerHTML = output;
     };
   })();
 
