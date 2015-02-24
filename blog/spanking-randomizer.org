@@ -108,7 +108,7 @@ window.onload = function(){
       var output = pick(statement);
 
         for(var i = 0; i < params.chain; i++){
-          if(i > 1){
+          if(i > 0){
             output += "... Then";
           }
           output += " " + impl.verb + " " + state + " " + swats + " time" +
