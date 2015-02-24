@@ -46,6 +46,10 @@ spankings, but does not necessarily guarantee it.
 <input id="slider" style="width:100%; margin-left:0px;" type="range" min="0" max="100" value="50" oninput="updateSlider(value)" />
 <div id="intense" style="text-align: center;">Ouch!</div>
 <script>
+var updateTimes = function(times){
+  document.getElementById("times").innerHTML;
+};
+
 var updateSlider = (function(){
   var intense = {
     "0": "Don't hurt me! ;_;",
@@ -84,6 +88,7 @@ function spankMe(){
     var naked = document.getElementById('naked');
     var stop = document.getElementById('stop');
     var barebottom = document.getElementById('barebottom');
+    var times = document.getElementById('switching');
 
     var intensity = Math.floor(Math.pow((slider.value * 2), 2) / 100);
     var url = blogpath + intensity;
@@ -102,6 +107,10 @@ function spankMe(){
    if(!barebottom.checked){
      url += "&bare=false";
    }
+
+  if(!isNaN(times.value) && times.value > 1){
+     url += "&chain=" + times.value;
+  }
 
    window.location.href = url;
 }
@@ -127,10 +136,10 @@ Are you OK with being naked during the spanking?
 
 #+BEGIN_HTML
 <style>
-#naked:checked ~ #bare{
+#naked:checked ~ #bare, #same:checked ~ #switch{
   display: none;
 }
-#bare{
+#bare, #switch{
   padding-top: 20px;
 }
 </style>
@@ -138,6 +147,17 @@ Are you OK with being naked during the spanking?
   <p>Is bare-bottom spanking allowed at least?</p>
   <input type="radio" name="barebottom" id="barebottom" checked/>...fine
   <input type="radio" name="barebottom" />NO!
+</div>
+#+END_HTML
+
+* Switching it up
+Do you want to switch up the spanking partway through?
+#+BEGIN_HTML
+<input type="radio" name="switch" id="same" checked/>Nah
+<input type="radio" name="switch" />Let's do it!
+<div id="switch">
+  <p>Oh yeah? How many times? <span id="times">1</span></p>
+  <input id="switching" style="width:100%; margin-left:0px;" type="range" min="1" max="10" value="1" oninput="updateTimes(value)" />
 </div>
 #+END_HTML
 
