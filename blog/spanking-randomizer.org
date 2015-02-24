@@ -101,13 +101,14 @@ window.onload = function(){
     }
 
     return function(){
-      var impl = pick(params.implement);
-      var pos = pick(position);
-      var state = pick(dress);
-      var swats = adjustedRandom(minimum, impl.max); 
-      var output = pick(statement);
+      var impl, pos, state, swats, output = pick(statement);
 
         for(var i = 0; i < params.chain; i++){
+          var impl = pick(params.implement);
+          var pos = pick(position);
+          var state = pick(dress);
+          var swats = adjustedRandom(minimum, impl.max); 
+
           if(i > 0){
             output += "... Then";
           }
