@@ -88,7 +88,7 @@ window.onload = function(){
 
       if(!result) result = 1;
 
-      return result;
+      return result / (params.chain < 1 ? 1 : params.chain);
     }
 
 
@@ -107,7 +107,7 @@ window.onload = function(){
           var impl = pick(params.implement);
           var pos = pick(position);
           var state = pick(dress);
-          var swats = adjustedRandom(minimum, impl.max); 
+          var swats = adjustedRandom(minimum, impl.max);
 
           if(i > 0){
             output += "... Then";
