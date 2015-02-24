@@ -34,7 +34,8 @@ var params = {
   'stop': false,
   'naked': true,
   'bare': true,
-  'nasty': false
+  'nasty': false,
+  'chain': 1
 };
 
 window.onload = function(){
@@ -104,12 +105,19 @@ window.onload = function(){
       var pos = pick(position);
       var state = pick(dress);
       var swats = adjustedRandom(minimum, impl.max); 
+      var output = pick(statement);
 
-        document.getElementById("output").innerHTML = pick(statement) + " " +
-        impl.verb + " " + state + " " + swats + " time" +
-        (swats > 1 ? "s" : "") + " in the " + pos + " position" +
-        (impl.adjectives ? " with a " + pick(impl.adjectives) + " " +
-        impl.name : "");
+        for(var i = 0; i < params.chain; i++){
+          if(i > 1){
+            output += "... Then";
+          }
+          output += " " + impl.verb + " " + state + " " + swats + " time" +
+          (swats > 1 ? "s" : "") + " in the " + pos + " position" +
+          (impl.adjectives ? " with a " + pick(impl.adjectives) + " " +
+          impl.name : "");
+        }
+
+        document.getElementById("output").innerHTML =
     };
   })();
 
