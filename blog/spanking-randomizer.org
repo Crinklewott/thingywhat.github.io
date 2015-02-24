@@ -88,7 +88,7 @@ window.onload = function(){
 
       if(!result) result = 1;
 
-      return Math.ceil(result / (params.chain < 1 ? 1 : params.chain));
+      return Math.ceil(result / (params.chain < 1 ? 1 : params.chain) * 1.5);
     }
 
 
