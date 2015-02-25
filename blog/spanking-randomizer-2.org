@@ -176,8 +176,10 @@ Do you want to customize the implements you can use?
 <input type="radio" name="impl" />Oh, totally!
 <div id="switchimpl">
   <p>Then here you go! The <i>Base Swats</i> refers to the maximum number
-you can get when you don't touch the intensity... And <i>Variants</i> are any
-number of special types of each implement you may have lying around.</p>
+of times you can get spanked with an implement if you don't touch the
+intensity at the top of this page... <i>Variants</i> are a list of different
+types of each implement you may have. You can add as many as you like by
+separating the with commas.</p>
 <table id="implements"><tr><th>Implement</th><th>Base swats</th><th>Variants</th><th>Remove</th></tr></table>
 <button onclick="addNewRow()">Add Implement</button>
 <script>
