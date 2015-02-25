@@ -175,8 +175,8 @@ Do you want to customize the implements you can use?
 <input type="radio" name="impl" id="sameimpl" checked/>I'm good, thanks
 <input type="radio" name="impl" />Oh, totally!
 <div id="switchimpl">
-  <p>Then here you go! The <b>Base Swats</b> refers to the maximum number
-you can get when you don't touch the intensity... And variants are any
+  <p>Then here you go! The <i>Base Swats</i> refers to the maximum number
+you can get when you don't touch the intensity... And <i>Variants</i> are any
 number of special types of each implement you may have lying around.</p>
 <table id="implements"><tr><th>Implement</th><th>Base swats</th><th>Variants</th><th>Remove</th></tr></table>
 <button onclick="addNewRow()">Add Implement</button>
