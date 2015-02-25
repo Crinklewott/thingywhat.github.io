@@ -142,8 +142,9 @@ window.onload = function(){
           }
           output += " " + impl.verb + " " + state + " " + swats + " time" +
           (swats > 1 ? "s" : "") + " in the " + pos + " position" +
-          (impl.adjectives ? " with a " + pick(impl.adjectives) + " " +
-          impl.name : "");
+          (impl.adjectives && !!impl.adjectives[0]
+            ? " with a " + pick(impl.adjectives) + " " + impl.name
+            : "");
         }
 
         document.getElementById("output").innerHTML = output;
@@ -172,7 +173,7 @@ Want to tweak the randomizer? Have some <a href="http://thingywhat.github.io/blo
     <div>
       <div class="post-meta">
         <span title="post date" class="post-info">2015-01-22</span>
-        <span title="last modification date" class="post-info">2015-02-23</span>
+        <span title="last modification date" class="post-info">2015-02-24</span>
         <span title="tags" class="post-info"><a href="/tags/spanking/">spanking</a> <a href="/tags/script/">script</a></span>
         <span title="author" class="post-info">thingywhat</span>
       </div>
