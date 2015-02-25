@@ -227,15 +227,15 @@ separating each type with commas.</p>
 <table id="implements"><tr><th>Implement</th><th>Base swats</th><th>Variants</th><th>Remove</th></tr></table>
 <button onclick="addNewRow()">Add Implement</button>
 <script>
- var defaults = ([
+ var defaults = [
     {name:"hand", verb:"handspanked", "max":75},
     {name:"switch", verb:"switched", "max":15},
     {name:"belt", verb:"belted", "max":50, adjectives:["leather"]},
-    {name:"cane", verb:"caned", "max":15, adjectives:["wicked","rattan","fierce"]},
-    {name:"brush", verb:"spanked", "max":50, adjectives:["heavy","bath","hair","wooden"]},
-    {name:"paddle", verb:"paddled", "max":50, adjectives:["lexan","wooden","hole-filled","frat","ping-pong"]},
+    {name:"cane", verb:"caned", "max":15, adjectives:["rattan"]},
+    {name:"brush", verb:"spanked", "max":50, adjectives:["bath","hair"]},
+    {name:"paddle", verb:"paddled", "max":50, adjectives:["lexan","wooden","hole-filled","ping-pong"]},
     {name:"spoon", verb:"spanked", "max":50, adjectives:["wooden","mixing","slotted"]}
-  ]);
+  ];
  var implementTable = document.getElementById('implements');
 
  implementTable.onclick = function(e){
