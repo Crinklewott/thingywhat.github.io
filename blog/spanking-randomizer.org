@@ -114,8 +114,9 @@ window.onload = function(){
           }
           output += " " + impl.verb + " " + state + " " + swats + " time" +
           (swats > 1 ? "s" : "") + " in the " + pos + " position" +
-          (impl.adjectives ? " with a " + pick(impl.adjectives) + " " +
-          impl.name : "");
+          (impl.adjectives && !!impl.adjectives[0]
+            ? " with a " + pick(impl.adjectives) + " " + impl.name
+            : "");
         }
 
         document.getElementById("output").innerHTML = output;
