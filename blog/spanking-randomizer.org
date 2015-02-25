@@ -114,7 +114,7 @@ window.onload = function(){
           }
           output += " " + impl.verb + " " + state + " " + swats + " time" +
           (swats > 1 ? "s" : "") + " in the " + pos + " position" +
-          (impl.adjectives ? " with a " +  +
+          (impl.adjectives ? " with a " +
             (!!impl.adjectives[0]
               ? pick(impl.adjectives) + impl.name : impl.name)
             : "");
