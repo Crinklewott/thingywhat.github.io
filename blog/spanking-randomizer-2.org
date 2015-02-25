@@ -89,6 +89,7 @@ function spankMe(){
     var stop = document.getElementById('stop');
     var barebottom = document.getElementById('barebottom');
     var times = document.getElementById('switching');
+    var sameImplements = document.getElementById('sameimpl');
 
     var intensity = Math.floor(Math.pow((slider.value * 2), 2) / 100);
     var url = blogpath + intensity;
@@ -110,6 +111,10 @@ function spankMe(){
 
   if(!isNaN(times.value) && times.value > 1){
      url += "&chain=" + times.value;
+  }
+
+  if(!sameImplements.checked){
+    url += "&implement=" + tableToJSON();
   }
 
    window.location.href = url;
@@ -136,10 +141,10 @@ Are you OK with being naked during the spanking?
 
 #+BEGIN_HTML
 <style>
-#naked:checked ~ #bare, #same:checked ~ #switch{
+#naked:checked ~ #bare, #same:checked ~ #switch, #sameimpl ~ #switchimpl{
   display: none;
 }
-#bare, #switch{
+#bare, #switch, #switchimpl{
   padding-top: 20px;
 }
 </style>
@@ -161,6 +166,112 @@ get.
 <div id="switch">
   <p>Oh yeah? How many times? <span id="times">1</span></p>
   <input id="switching" style="width:100%; margin-left:0px;" type="range" min="1" max="10" value="1" oninput="updateTimes(value)" />
+</div>
+#+END_HTML
+
+* Implements
+Do you want to customize the implements you can use?
+#+BEGIN_HTML
+<input type="radio" name="impl" id="sameimpl" checked/>I'm good, thanks
+<input type="radio" name="impl" />Oh, totally!
+<div id="switchimpl">
+  <p>Then here you go! The <b>Base Swats</b> refers to the maximum number
+you can get when you don't touch the intensity... And variants are any
+number of special types of each implement you may have lying around.</p>
+<table id="implements"><tr><th>Implement</th><th>Base swats</th><th>Variants</th><th>Remove</th></tr></table>
+<button onclick="addNewRow()">Add Implement</button>
+<script>
+ var defaults = ([
+    {name:"hand", verb:"handspanked", "max":75},
+    {name:"switch", verb:"switched", "max":15},
+    {name:"belt", verb:"belted", "max":50, adjectives:["leather"]},
+    {name:"cane", verb:"caned", "max":15, adjectives:["wicked","rattan","fierce"]},
+    {name:"brush", verb:"spanked", "max":50, adjectives:["heavy","bath","hair","wooden"]},
+    {name:"paddle", verb:"paddled", "max":50, adjectives:["lexan","wooden","hole-filled","frat","ping-pong"]},
+    {name:"spoon", verb:"spanked", "max":50, adjectives:["wooden","mixing","slotted"]}
+  ]);
+ var implementTable = document.getElementById('implements');
+
+ implementTable.onclick = function(e){
+     var implementList = document.querySelectorAll('tr.implement');
+     if(e.target.className === "removeImplement"
+         && Array.prototype.filter.call(implementList, function(implement){
+             var inputs = implement.querySelectorAll('input');
+             return !!inputs[0].value
+               && !!inputs[1].value
+               && !isNaN(inputs[1].value);
+         }).length > 1){
+             var row = e.target.parentNode.parentNode;
+             var table = row.parentNode;
+             table.removeChild(row);
+     }
+ };
+ 
+ var currentRow, currentColumn, currentInput;
+ function addRow(name, max, adjectives){
+     currentRow = document.createElement('tr');
+     currentRow.className = "implement";
+
+     currentColumn = document.createElement('td');
+     currentInput = document.createElement('input');
+     currentInput.value = name;
+     currentColumn.appendChild(currentInput);
+     currentRow.appendChild(currentColumn);
+
+     currentColumn = document.createElement('td');
+     currentInput = document.createElement('input');
+     currentInput.value = max;
+     currentColumn.appendChild(currentInput);
+     currentRow.appendChild(currentColumn);
+
+     currentColumn = document.createElement('td');
+     currentInput = document.createElement('input');
+     currentInput.value = !!adjectives ? adjectives : "";
+     currentColumn.appendChild(currentInput);
+     currentRow.appendChild(currentColumn);
+
+     currentColumn = document.createElement('td');
+     currentInput = document.createElement('button');
+     currentInput.innerHTML = "Remove";
+     currentInput.className = "removeImplement";
+     currentColumn.appendChild(currentInput);
+     currentRow.appendChild(currentColumn);
+     
+     implementTable.appendChild(currentRow);
+ }
+ 
+ for(var i = 0; i < defaults.length; i++){
+     addRow(defaults[i].name, defaults[i].max, defaults[i].adjectives);
+ }
+
+ function addNewRow(){
+     var last = document.querySelectorAll("tr.implement");
+     last = last[last.length - 1];
+     var inputs = last.querySelectorAll("input");
+     
+     if(!!inputs[0].value && !!inputs[1].value && parseInt(inputs[1].value)){
+         addRow('','');
+     }
+ }
+ 
+ function tableToJSON(){
+     return JSON.stringify(Array.prototype.map.call(
+         Array.prototype.filter.call(
+             implementTable.querySelectorAll('tr.implement'), function(row){
+                 var inputs = row.querySelectorAll('input');
+                 return !!inputs[0].value && !!inputs[1].value;
+             }), function(row){
+                 var inputs = row.querySelectorAll('input');
+                 return {
+                     'name': inputs[0].value,
+                     'verb': "spanked",
+                     "max": inputs[1].value,
+                     'adjectives': inputs[2].value.split(',')
+                 };
+             }
+     ));
+ }
+</script>
 </div>
 #+END_HTML
 
