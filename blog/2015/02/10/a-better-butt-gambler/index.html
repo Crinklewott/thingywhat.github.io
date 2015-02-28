@@ -120,6 +120,7 @@ function spankMe(){
     var barebottom = document.getElementById('barebottom');
     var times = document.getElementById('switching');
     var sameImplements = document.getElementById('sameimpl');
+    var dressup = document.getElementById('dressup');
 
     var intensity = Math.floor(Math.pow((slider.value * 2), 2) / 100);
     var url = blogpath + intensity;
@@ -145,6 +146,10 @@ function spankMe(){
 
   if(!sameImplements.checked){
     url += "&implement=" + tableToJSON();
+  }
+
+  if(dressup.checked){
+    url += "&dressup=true"
   }
 
    window.location.href = url;
@@ -206,6 +211,9 @@ get.
 <div id="switch">
   <p>Oh yeah? How many times? <span id="times">1</span></p>
   <input id="switching" style="width:100%; margin-left:0px;" type="range" min="1" max="10" value="1" oninput="updateTimes(value)" />
+  <p>Also, do you want to sometimes put clothes back on between these?</p>
+  <input type="radio" name="dressup" id="dressup"/>Eh, why not?
+  <input type="radio" name="dressup" checked/>No, that's silly! You're silly, thingywhat!
 </div>
 </div>
 </div>
@@ -358,7 +366,7 @@ above into consideration. Tread lightly!
     <div>
       <div class="post-meta">
         <span title="post date" class="post-info">2015-02-10</span>
-        <span title="last modification date" class="post-info">2015-02-24</span>
+        <span title="last modification date" class="post-info">2015-02-28</span>
         <span title="tags" class="post-info"><a href="/tags/spanking/">spanking</a> <a href="/tags/script/">script</a></span>
         <span title="author" class="post-info">thingywhat</span>
       </div>
