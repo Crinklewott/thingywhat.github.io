@@ -171,7 +171,7 @@ get.
 <div id="switch">
   <p>Oh yeah? How many times? <span id="times">1</span></p>
   <input id="switching" style="width:100%; margin-left:0px;" type="range" min="1" max="10" value="1" oninput="updateTimes(value)" />
-  <p>Also, do you want to sometimes put clothes back on between these?</p>
+  <p>...Also, do you want to sometimes put clothes back on between spankings?</p>
   <input type="radio" name="dressup" id="dressup"/>Eh, why not?
   <input type="radio" name="dressup" checked/>No, that's silly! You're silly, thingywhat!
 </div>
