@@ -63,7 +63,8 @@ var params = {
   'naked': true,
   'bare': true,
   'nasty': false,
-  'chain': 1
+  'chain': 1,
+  'dressup': false
 };
 
 window.onload = function(){
@@ -78,11 +79,11 @@ window.onload = function(){
     var position = ["over-the-knee", "diaper", "bent-over", "under-arm", "prone"];
     var dress = ["over your pants", "on your underwear", "pantsless"];
 
-    if(params.naked){
-      dress.push("naked");
-    }
     if(params.bare){
       dress.push("on your bare-bottom");
+    }
+    if(params.naked){
+      dress.push("naked");
     }
 
     var statement = [
@@ -132,10 +133,15 @@ window.onload = function(){
       var impl, pos, state, swats, output = pick(statement);
 
         for(var i = 0; i < params.chain; i++){
-          var impl = pick(params.implement);
-          var pos = pick(position);
-          var state = pick(dress);
-          var swats = adjustedRandom(minimum, impl.max);
+          if(!params.dressup && state){
+              state = pick(dress, dress.indexOf(state));
+          } else {
+              state = pick(dress);
+          }
+
+          impl = pick(params.implement);
+          pos = pick(position);
+          swats = adjustedRandom(minimum, impl.max);
 
           if(i > 0){
             output += "... Then";
@@ -174,7 +180,7 @@ Want to tweak the randomizer? Have some <a href="http://thingywhat.github.io/blo
     <div>
       <div class="post-meta">
         <span title="post date" class="post-info">2015-01-22</span>
-        <span title="last modification date" class="post-info">2015-02-24</span>
+        <span title="last modification date" class="post-info">2015-02-28</span>
         <span title="tags" class="post-info"><a href="/tags/spanking/">spanking</a> <a href="/tags/script/">script</a></span>
         <span title="author" class="post-info">thingywhat</span>
       </div>
