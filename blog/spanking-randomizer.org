@@ -55,7 +55,8 @@ window.onload = function(){
       dress.push("on your bare-bottom");
     }
     if(params.naked){
-      dress.push("naked");
+      dress.push("naked from the waist down");
+      dress.push("completely naked");
     }
 
     var statement = [
