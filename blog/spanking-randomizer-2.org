@@ -89,6 +89,7 @@ function spankMe(){
     var stop = document.getElementById('stop');
     var barebottom = document.getElementById('barebottom');
     var times = document.getElementById('switching');
+    var same = document.getElementById('same');
     var sameImplements = document.getElementById('sameimpl');
     var dressup = document.getElementById('dressup');
 
@@ -110,7 +111,7 @@ function spankMe(){
      url += "&bare=false";
    }
 
-  if(!isNaN(times.value) && times.value > 1){
+  if(!isNaN(times.value) && same.checked){
      url += "&chain=" + times.value + 1;
   }
 
