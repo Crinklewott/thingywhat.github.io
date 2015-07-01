@@ -141,7 +141,7 @@ function spankMe(){
      url += "&bare=false";
    }
 
-  if(!isNaN(times.value) && same.checked){
+  if(!isNaN(times.value) && !same.checked){
      url += "&chain=" + times.value + 1;
   }
 
