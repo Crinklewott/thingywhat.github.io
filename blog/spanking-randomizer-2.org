@@ -111,7 +111,7 @@ function spankMe(){
    }
 
   if(!isNaN(times.value) && times.value > 1){
-     url += "&chain=" + times.value;
+     url += "&chain=" + times.value + 1;
   }
 
   if(!sameImplements.checked){
