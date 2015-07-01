@@ -142,7 +142,7 @@ function spankMe(){
    }
 
   if(!isNaN(times.value) && !same.checked){
-     url += "&chain=" + times.value + 1;
+     url += "&chain=" + Number(times.value) + 1;
   }
 
   if(!sameImplements.checked){
