@@ -229,6 +229,7 @@ table th.right, table td.right {
     width: 160px;
 }
 .masthead img.avatar {
+    display: inline;
     float: right;
     margin-top: -100px;
     margin-right: 10%;
