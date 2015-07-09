@@ -231,6 +231,7 @@ table th.right, table td.right {
 .masthead img.avatar {
     position: absolute;
     width: 200px;
+    max-width: 20%;
     top: 100px;
     right: 29%;
     background-color: #fff;
