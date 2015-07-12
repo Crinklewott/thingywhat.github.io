@@ -48,125 +48,150 @@ Nobody except you:
 
 <pre id="output" style="word-break:normal;cursor:pointer;" onclick="gamble();"></pre>
 <script type="text/javascript">
-var params = {
-  'implement': [
-    {name:"hand", verb:"handspanked", "max":75},
-    {name:"switch", verb:"switched", "max":15},
-    {name:"belt", verb:"belted", "max":50, adjectives:["leather"]},
-    {name:"cane", verb:"caned", "max":15, adjectives:["rattan"]},
-    {name:"brush", verb:"spanked", "max":50, adjectives:["bath","hair"]},
-    {name:"paddle", verb:"paddled", "max":50, adjectives:["lexan","wooden","hole-filled","ping-pong"]},
-    {name:"spoon", verb:"spanked", "max":50, adjectives:["wooden","mixing","slotted"]}
-  ],
-  'intensity': 100,
-  'stop': false,
-  'naked': true,
-  'bare': true,
-  'nasty': false,
-  'chain': 1,
-  'dressup': false
-};
+ var params = {
+   'implement': [
+     {name:"hand", verb:"handspanked", "max":75},
+     {name:"switch", verb:"switched", "max":15},
+     {name:"belt", verb:"belted", "max":50, adjectives:["leather"]},
+     {name:"cane", verb:"caned", "max":15, adjectives:["rattan"]},
+     {name:"brush", verb:"spanked", "max":50, adjectives:["bath","hair"]},
+     {name:"paddle", verb:"paddled", "max":50, adjectives:["lexan","wooden","hole-filled","ping-pong"]},
+     {name:"spoon", verb:"spanked", "max":50, adjectives:["wooden","mixing","slotted"]}
+   ],
+   'intensity': 100,
+   'stop': false,
+   'naked': true,
+   'bare': true,
+   'nasty': false,
+   'chain': 1,
+   'dressup': false
+ };
 
-window.onload = function(){
-  window.location.hash.slice(1).replace(/([^&=]+)=([^&]+)/g, function(a,key,val){
-    params[key] = JSON.parse(val);
-    return a;
-  });
+ window.onload = function(){
+   window.location.hash.slice(1).replace(/([^&=]+)=([^&]+)/g, function(a,key,val){
+     params[key] = JSON.parse(val);
+     return a;
+   });
 
-  window.gamble = (function(){    
-    var minimum = 10;
+   window.gamble = (function(){
+     var minimum = 10;
+     var position = [
+       "over-the-knee",
+       "diaper",
+       "bent-over",
+       "under-arm",
+       "prone"
+     ];
+     var dress = [
+       "over your pants",
+       "pants-down, on your underwear",
+       "pantsless, on your underwear"
+     ];
+     var statement = [
+       "You should be",
+       "It's time to be",
+       "You'd better be ready to be",
+       "You're gonna get",
+       "You will be",
+       "You're gonna be"
+     ];
 
-    var position = ["over-the-knee", "diaper", "bent-over", "under-arm", "prone"];
-    var dress = ["over your pants",
-                 "pants-down, on your underwear",
-                 "pantsless, on your underwear"];
+     // Adding values if parameters exist
+     if(params.bare){
+       dress.push("on your bare-bottom");
+     }
+     if(params.naked){
+       dress.push("naked from the waist down");
+       dress.push("completely naked");
+     }
 
-    if(params.bare){
-      dress.push("on your bare-bottom");
-    }
-    if(params.naked){
-      dress.push("naked from the waist down");
-      dress.push("completely naked");
-    }
+     /*
+      ,* Returns an "adjusted" random number, adjusted meaning the
+      ,* random number is changed based on the selected intensity, the
+      ,* number is decreased based on the size of the spanking chain, and
+      ,* swayed upwards if the "nasty" parameter is set,
+      ,*/
+     function adjustedRandom(min, max){
+       if(max < 1){
+         return "innumerable (smartass)";
+       } if(min > max){
+         min = 1;
+       }
 
-    var statement = [
-      "You should be",
-      "It's time to be",
-      "You'd better be ready to be",
-      "You're gonna get",
-      "You will be",
-      "You're gonna be"
-    ];
+       var result = random(min, max * (params.intensity / 100));
 
-    function adjustedRandom(min, max){
-      if(max < 1){
-        return "innumerable (smartass)";
-      } if(min > max){
-        min = 1;
-      }
+       if(params.nasty){
+         var candidate;
+         for(var i = 0; i > 5; i++){
+           candidate = random(min, max * (params.intensity / 100));
 
-      var result = random(min, max * (params.intensity / 100));
+           if(candidate > result){
+             result = candidate;
+           }
+         }
+       }
 
-      if(params.nasty){
-        var candidate;
-        for(var i = 0; i > 5; i++){
-          candidate = random(min, max * (params.intensity / 100));
+       if(!result) result = 1;
 
-          if(candidate > result){
-            result = candidate;
-          }
-        }
-      }
-
-      if(!result) result = 1;
-
-      return Math.ceil(result / (params.chain <= 1 ? 1 : (params.chain / 2)));
-    }
+       return Math.ceil(result / (params.chain <= 1 ? 1 : (params.chain / 2)));
+     }
 
 
-    function random(min, max){
-      return min + Math.floor(Math.random() * (max - min));
-    }
+     /*
+      ,* Returns a random number between two numbers.
+      ,*/
+     function random(min, max){
+       return min + Math.floor(Math.random() * (max - min));
+     }
 
-    function pick(array, first){
-      return array[random(first || 0, array.length)];
-    }
+     /*
+      ,* Picks a random item from an array.
+      ,*/
+     function pick(array, first){
+       return array[random(first || 0, array.length)];
+     }
 
-    return function(){
-      var impl, pos, state, swats, output = pick(statement);
+     /*
+      ,* Generates a spanking, and puts it in the "output" element.
+      ,*/
+     return function(){
+       var impl, pos, state, swats, output = pick(statement);
 
-        for(var i = 0; i < params.chain; i++){
-          if(!params.dressup && state){
-              state = pick(dress, dress.indexOf(state));
-          } else {
-              state = pick(dress);
-          }
+       for(var i = 0; i < params.chain; i++){
+         if(!params.dressup && state){
+           state = pick(dress, dress.indexOf(state));
+         } else {
+           state = pick(dress);
+         }
 
-          impl = pick(params.implement);
-          pos = pick(position);
-          swats = adjustedRandom(minimum, impl.max);
+         impl = pick(params.implement);
+         pos = pick(position);
+         swats = adjustedRandom(minimum, impl.max);
 
-          if(i > 0){
-            output += "... Then";
-          }
-          output += " " + impl.verb + " " + state + " " + swats + " time" +
-          (swats > 1 ? "s" : "") + " in the " + pos + " position" +
-          (impl.adjectives ? " with a" +
-            (!!impl.adjectives[0]
-              ? " " + pick(impl.adjectives).trim() + " " + impl.name : " " + impl.name)
-            : "");
-        }
+         if(i > 0){
+           output += "... Then";
+         }
+         output += " " + impl.verb + " " + state + " " + swats + " time" +
+           (swats > 1 ? "s" : "") + " in the " + pos + " position" +
+           (impl.adjectives ? " with a" +
+             (!!impl.adjectives[0]
+            ? " " + pick(impl.adjectives).trim() + " " + impl.name : " " + impl.name)
+               : "");
+       }
 
-        document.getElementById("output").innerHTML = output;
-    };
-  })();
+       document.getElementById("output").innerHTML = output;
+     };
+   })();
 
-  if(!params.stop){
-    gamble();
-  } else {
-    document.getElementById("output").innerHTML = "Click to see!";
-  }
-};
+   // If there is a "stop" parameter, we want to stop the spanking
+   // from being automatically generated until the usre clicks the
+   // "output" box.
+   if(!params.stop){
+     gamble();
+   } else {
+     document.getElementById("output").innerHTML = "Click to see!";
+   }
+ };
 </script>
 
 <p>
@@ -183,7 +208,7 @@ Want to tweak the randomizer? Have some <a href="http://thingywhat.github.io/blo
     <div>
       <div class="post-meta">
         <span title="post date" class="post-info">2015-01-22</span>
-        <span title="last modification date" class="post-info">2015-03-02</span>
+        <span title="last modification date" class="post-info">2015-07-12</span>
         <span title="tags" class="post-info"><a href="/tags/spanking/">spanking</a> <a href="/tags/script/">script</a></span>
         <span title="author" class="post-info">thingywhat</span>
       </div>
