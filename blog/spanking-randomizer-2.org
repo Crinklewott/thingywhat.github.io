@@ -21,111 +21,106 @@ How much heat can you take? Higher means a chance for a LOT more
 spankings, but does not necessarily guarantee it.
 
 #+BEGIN_HTML
-<table style="width:100%"><tr>
-  <td><img src="/media/img/Pain0.png" style="width: 100%" /></td>
-  <td><img src="/media/img/Pain1.png" style="width: 100%" /></td>
-  <td><img src="/media/img/Pain2.png" style="width: 100%" /></td>
-  <td><img src="/media/img/Pain3.png" style="width: 100%" /></td>
-  <td><img src="/media/img/Pain4.png" style="width: 100%" /></td>
-</table>
-<div id="meter"></div>
-<style>
-#meter{
-  height: 3px;
-  width: 100%;
-  background: #48ff30; /* Old browsers */
-  background: -moz-linear-gradient(left, #48ff30 0%, #fff728 50%, #ff0000 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#48ff30), color-stop(50%,#fff728), color-stop(100%,#ff0000)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left, #48ff30 0%,#fff728 50%,#ff0000 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left, #48ff30 0%,#fff728 50%,#ff0000 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(left, #48ff30 0%,#fff728 50%,#ff0000 100%); /* IE10+ */
-  background: linear-gradient(to right, #48ff30 0%,#fff728 50%,#ff0000 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48ff30', endColorstr='#ff0000',GradientType=1 ); /* IE6-9 */
-}
-</style>
-<input id="slider" style="width:100%; margin-left:0px;" type="range" min="0" max="100" value="50" oninput="updateSlider(value)" />
-<div id="intense" style="text-align: center;">Ouch!</div>
-<script>
-var updateTimes = function(times){
-  document.getElementById("times").innerHTML = parseInt(times);
-};
-
-var updateSlider = (function(){
-  var intense = {
-    "0": "Don't hurt me! ;_;",
-    "8": "Be gentle",
-    "18": "That stings a bit",
-    "28": "Ow",
-    "38": "That hurts!",
-    "50": "Ouch!",
-    "60": "Yikes!!",
-    "71": "GAH!",
-    "81": "YEOWCH!!",
-    "91": "WAAAAAHHHH!!!",
-    "100": "Hell hath no fury!"
+  <table style="width:100%"><tr>
+    <td><img src="/media/img/Pain0.png" style="width: 100%" /></td>
+    <td><img src="/media/img/Pain1.png" style="width: 100%" /></td>
+    <td><img src="/media/img/Pain2.png" style="width: 100%" /></td>
+    <td><img src="/media/img/Pain3.png" style="width: 100%" /></td>
+    <td><img src="/media/img/Pain4.png" style="width: 100%" /></td>
+  </table>
+  <div id="meter"></div>
+  <style>
+  #meter{
+    height: 3px;
+    width: 100%;
+    background: #48ff30; /* Old browsers */
+    background: -moz-linear-gradient(left, #48ff30 0%, #fff728 50%, #ff0000 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#48ff30), color-stop(50%,#fff728), color-stop(100%,#ff0000)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, #48ff30 0%,#fff728 50%,#ff0000 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, #48ff30 0%,#fff728 50%,#ff0000 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, #48ff30 0%,#fff728 50%,#ff0000 100%); /* IE10+ */
+    background: linear-gradient(to right, #48ff30 0%,#fff728 50%,#ff0000 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48ff30', endColorstr='#ff0000',GradientType=1 ); /* IE6-9 */
+  }
+  </style>
+  <input id="slider" style="width:100%; margin-left:0px;" type="range" min="0" max="100" value="50" oninput="updateSlider(value)" />
+  <div id="intense" style="text-align: center;">Ouch!</div>
+  <script>
+  var updateTimes = function(times){
+    document.getElementById("times").innerHTML = parseInt(times);
   };
 
-  return function(intensity){
-    var candidate = 0;
-    for(var i in intense){
-      if(!isNaN(i)){
-        i = parseInt(i);
-        if(i <= parseInt(intensity) && i > candidate)
-         candidate = i;
+  var updateSlider = (function(){
+    var intense = {
+      "0": "Don't hurt me! ;_;",
+      "8": "Be gentle",
+      "18": "That stings a bit",
+      "28": "Ow",
+      "38": "That hurts!",
+      "50": "Ouch!",
+      "60": "Yikes!!",
+      "71": "GAH!",
+      "81": "YEOWCH!!",
+      "91": "WAAAAAHHHH!!!",
+      "100": "Hell hath no fury!"
+    };
+
+    return function(intensity){
+      var candidate = 0;
+      for(var i in intense){
+        if(!isNaN(i)){
+          i = parseInt(i);
+          if(i <= parseInt(intensity) && i > candidate)
+           candidate = i;
+        }
       }
+      document.getElementById("intense").innerHTML = intense[candidate];
     }
-    document.getElementById("intense").innerHTML = intense[candidate];
-  }
-})();
+  })();
 
-updateSlider(document.getElementById('slider').value);
+  updateSlider(document.getElementById('slider').value);
 
-var blogpath = "/blog/2015/01/22/A%20script%20for%20daredevil%20butt-gamblers/#intensity=";
+  var blogpath = "/blog/2015/01/22/A%20script%20for%20daredevil%20butt-gamblers/#intensity=";
 
-function spankMe(){
-    var slider = document.getElementById("slider");
-    var nasty = document.getElementById('nasty');
-    var naked = document.getElementById('naked');
-    var stop = document.getElementById('stop');
-    var barebottom = document.getElementById('barebottom');
-    var times = document.getElementById('switching');
-    var same = document.getElementById('same');
-    var sameImplements = document.getElementById('sameimpl');
-    var dressup = document.getElementById('dressup');
+  function spankMe(){
+      var slider = document.getElementById("slider");
+      var nasty = document.getElementById('nasty');
+      var naked = document.getElementById('naked');
+      var barebottom = document.getElementById('barebottom');
+      var times = document.getElementById('switching');
+      var same = document.getElementById('same');
+      var sameImplements = document.getElementById('sameimpl');
+      var dressup = document.getElementById('dressup');
 
-    var intensity = Math.floor(Math.pow((slider.value * 2), 2) / 100);
-    var url = blogpath + intensity;
-    if(nasty.checked){
-      url += "&nasty=true";
+      var intensity = Math.floor(Math.pow((slider.value * 2), 2) / 100);
+      var url = blogpath + intensity;
+      if(nasty.checked){
+        url += "&nasty=true";
+      }
+
+      if(!naked.checked){
+        url += "&naked=false";
+      }
+
+     if(!barebottom.checked){
+       url += "&bare=false";
+     }
+
+    if(!isNaN(times.value) && !same.checked){
+       url += "&chain=" + (Number(times.value) + 1);
     }
 
-    if(!naked.checked){
-      url += "&naked=false";
+    if(!sameImplements.checked){
+      url += "&implement=" + tableToJSON();
     }
 
-   if(stop.checked){
-     url += "&stop=true";
-   }
+    if(dressup.checked){
+      url += "&dressup=true"
+    }
 
-   if(!barebottom.checked){
-     url += "&bare=false";
-   }
-
-  if(!isNaN(times.value) && !same.checked){
-     url += "&chain=" + (Number(times.value) + 1);
+     window.location.href = url;
   }
-
-  if(!sameImplements.checked){
-    url += "&implement=" + tableToJSON();
-  }
-
-  if(dressup.checked){
-    url += "&dressup=true"
-  }
-
-   window.location.href = url;
-}
-</script>
+  </script>
 #+END_HTML
 
 * Nastiness
@@ -290,14 +285,6 @@ separating each type with commas.</p>
  }
 </script>
 </div>
-#+END_HTML
-
-* Display?
-Display the spanking immediately? Or should we wait until you click
-the randomizer to generate something?
-#+BEGIN_HTML
-<input type="radio" name="show" checked />Sure
-<input type="radio" name="show" id="stop" />No... I want to click it first.
 #+END_HTML
 
 * The moment of truth
