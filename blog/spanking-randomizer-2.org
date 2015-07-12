@@ -30,96 +30,97 @@ spankings, but does not necessarily guarantee it.
   </table>
   <div id="meter"></div>
   <style>
-  #meter{
-    height: 3px;
-    width: 100%;
-    background: #48ff30; /* Old browsers */
-    background: -moz-linear-gradient(left, #48ff30 0%, #fff728 50%, #ff0000 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#48ff30), color-stop(50%,#fff728), color-stop(100%,#ff0000)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(left, #48ff30 0%,#fff728 50%,#ff0000 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(left, #48ff30 0%,#fff728 50%,#ff0000 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(left, #48ff30 0%,#fff728 50%,#ff0000 100%); /* IE10+ */
-    background: linear-gradient(to right, #48ff30 0%,#fff728 50%,#ff0000 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48ff30', endColorstr='#ff0000',GradientType=1 ); /* IE6-9 */
-  }
+   #meter{
+     height: 3px;
+     width: 100%;
+     background: #48ff30; /* Old browsers */
+     background: -moz-linear-gradient(left, #48ff30 0%, #fff728 50%, #ff0000 100%); /* FF3.6+ */
+     background: -webkit-gradient(linear, left top, right top, color-stop(0%,#48ff30), color-stop(50%,#fff728), color-stop(100%,#ff0000)); /* Chrome,Safari4+ */
+     background: -webkit-linear-gradient(left, #48ff30 0%,#fff728 50%,#ff0000 100%); /* Chrome10+,Safari5.1+ */
+     background: -o-linear-gradient(left, #48ff30 0%,#fff728 50%,#ff0000 100%); /* Opera 11.10+ */
+     background: -ms-linear-gradient(left, #48ff30 0%,#fff728 50%,#ff0000 100%); /* IE10+ */
+     background: linear-gradient(to right, #48ff30 0%,#fff728 50%,#ff0000 100%); /* W3C */
+     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48ff30', endColorstr='#ff0000',GradientType=1 ); /* IE6-9 */
+   }
   </style>
   <input id="slider" style="width:100%; margin-left:0px;" type="range" min="0" max="100" value="50" oninput="updateSlider(value)" />
   <div id="intense" style="text-align: center;">Ouch!</div>
   <script>
-  var updateTimes = function(times){
-    document.getElementById("times").innerHTML = parseInt(times);
-  };
+   var updateTimes = function(times){
+     document.getElementById("times").innerHTML = parseInt(times);
+   };
 
-  var updateSlider = (function(){
-    var intense = {
-      "0": "Don't hurt me! ;_;",
-      "8": "Be gentle",
-      "18": "That stings a bit",
-      "28": "Ow",
-      "38": "That hurts!",
-      "50": "Ouch!",
-      "60": "Yikes!!",
-      "71": "GAH!",
-      "81": "YEOWCH!!",
-      "91": "WAAAAAHHHH!!!",
-      "100": "Hell hath no fury!"
-    };
+   var updateSlider = (function(){
+     var intense = {
+       "0": "Don't hurt me! ;_;",
+       "8": "Be gentle",
+       "18": "That stings a bit",
+       "28": "Ow",
+       "38": "That hurts!",
+       "50": "Ouch!",
+       "60": "Yikes!!",
+       "71": "GAH!",
+       "81": "YEOWCH!!",
+       "91": "WAAAAAHHHH!!!",
+       "100": "Hell hath no fury!"
+     };
 
-    return function(intensity){
-      var candidate = 0;
-      for(var i in intense){
-        if(!isNaN(i)){
-          i = parseInt(i);
-          if(i <= parseInt(intensity) && i > candidate)
-           candidate = i;
-        }
-      }
-      document.getElementById("intense").innerHTML = intense[candidate];
-    }
-  })();
+     return function(intensity){
+       var candidate = 0;
+       for(var i in intense){
+         if(!isNaN(i)){
+           i = parseInt(i);
+           if(i <= parseInt(intensity) && i > candidate)
+             candidate = i;
+         }
+       }
+       document.getElementById("intense").innerHTML = intense[candidate];
+     }
+   })();
 
-  updateSlider(document.getElementById('slider').value);
+   updateSlider(document.getElementById('slider').value);
 
-  var blogpath = "/blog/2015/01/22/A%20script%20for%20daredevil%20butt-gamblers/#intensity=";
+   var blogpath = "/blog/2015/01/22/A%20script%20for%20daredevil%20butt-gamblers/#intensity=";
 
-  function spankMe(){
-      var slider = document.getElementById("slider");
-      var nasty = document.getElementById('nasty');
-      var naked = document.getElementById('naked');
-      var barebottom = document.getElementById('barebottom');
-      var times = document.getElementById('switching');
-      var same = document.getElementById('same');
-      var sameImplements = document.getElementById('sameimpl');
-      var dressup = document.getElementById('dressup');
+   function spankMe(){
+     var slider = document.getElementById("slider");
+     var nasty = document.getElementById('nasty');
+     var naked = document.getElementById('naked');
+     var barebottom = document.getElementById('barebottom');
+     var times = document.getElementById('switching');
+     var same = document.getElementById('same');
+     var sameImplements = document.getElementById('sameimpl');
+     var dressup = document.getElementById('dressup');
 
-      var intensity = Math.floor(Math.pow((slider.value * 2), 2) / 100);
-      var url = blogpath + intensity;
-      if(nasty.checked){
-        url += "&nasty=true";
-      }
+     var intensity = Math.floor(Math.pow((slider.value * 2), 2) / 100);
+     var url = blogpath + intensity;
 
-      if(!naked.checked){
-        url += "&naked=false";
-      }
+     if(nasty.checked){
+       url += "&nasty=true";
+     }
+
+     if(!naked.checked){
+       url += "&naked=false";
+     }
 
      if(!barebottom.checked){
        url += "&bare=false";
      }
 
-    if(!isNaN(times.value) && !same.checked){
+     if(!isNaN(times.value) && !same.checked){
        url += "&chain=" + (Number(times.value) + 1);
-    }
+     }
 
-    if(!sameImplements.checked){
-      url += "&implement=" + tableToJSON();
-    }
+     if(!sameImplements.checked){
+       url += "&implement=" + tableToJSON();
+     }
 
-    if(dressup.checked){
-      url += "&dressup=true"
-    }
+     if(dressup.checked){
+       url += "&dressup=true"
+     }
 
      window.location.href = url;
-  }
+   }
   </script>
 #+END_HTML
 
@@ -129,31 +130,31 @@ is going to be *much* more likely to pick higher numbers of slaps for
 your spanking. (Note: This won't increase the maximum amount of
 spankings you can get, just sway the odds.)
 #+BEGIN_HTML
-<input type="radio" name="nasty" checked />NO!
-<input type="radio" name="nasty" id="nasty" />O-ok
+  <input type="radio" name="nasty" checked />NO!
+  <input type="radio" name="nasty" id="nasty" />O-ok
 #+END_HTML
 
 * Nakedness
 Are you OK with being naked during the spanking?
 #+BEGIN_HTML
-<input type="radio" name="naked" id="naked" checked/>It doesn't matter
-<input type="radio" name="naked" />NO!
+  <input type="radio" name="naked" id="naked" checked/>It doesn't matter
+  <input type="radio" name="naked" />NO!
 #+END_HTML
 
 #+BEGIN_HTML
-<style>
-#naked:checked ~ #bare, #same:checked ~ #switch, #sameimpl:checked ~ #switchimpl{
-  display: none;
-}
-#bare, #switch, #switchimpl{
-  padding-top: 20px;
-}
-</style>
-<div id="bare">
-  <p>Is bare-bottom spanking allowed at least?</p>
-  <input type="radio" name="barebottom" id="barebottom" checked/>...fine
-  <input type="radio" name="barebottom" />NO!
-</div>
+  <style>
+   #naked:checked ~ #bare, #same:checked ~ #switch, #sameimpl:checked ~ #switchimpl{
+     display: none;
+   }
+   #bare, #switch, #switchimpl{
+     padding-top: 20px;
+   }
+  </style>
+  <div id="bare">
+    <p>Is bare-bottom spanking allowed at least?</p>
+    <input type="radio" name="barebottom" id="barebottom" checked/>...fine
+    <input type="radio" name="barebottom" />NO!
+  </div>
 #+END_HTML
 
 * Switching it up
@@ -162,129 +163,129 @@ your butt gets a little break as you switch positions and implements,
 but we make up by slightly increasing the overall spankings you will
 get.
 #+BEGIN_HTML
-<input type="radio" name="switch" id="same" checked/>Nah
-<input type="radio" name="switch" />Let's do it!
-<div id="switch">
-  <p>Oh yeah? How many times? <span id="times">1</span></p>
-  <input id="switching" style="width:100%; margin-left:0px;" type="range" min="1" max="10" value="1" oninput="updateTimes(value)" />
-  <p>...Also, do you want to sometimes put clothes back on between spankings?</p>
-  <input type="radio" name="dressup" id="dressup"/>Eh, why not?
-  <input type="radio" name="dressup" checked/>No, that's silly! You're silly, thingywhat!
-</div>
+  <input type="radio" name="switch" id="same" checked/>Nah
+  <input type="radio" name="switch" />Let's do it!
+  <div id="switch">
+    <p>Oh yeah? How many times? <span id="times">1</span></p>
+    <input id="switching" style="width:100%; margin-left:0px;" type="range" min="1" max="10" value="1" oninput="updateTimes(value)" />
+    <p>...Also, do you want to sometimes put clothes back on between spankings?</p>
+    <input type="radio" name="dressup" id="dressup"/>Eh, why not?
+    <input type="radio" name="dressup" checked/>No, that's silly! You're silly, thingywhat!
+  </div>
 #+END_HTML
 
 * Implements
 Do you want to customize the implements you can use?
 #+BEGIN_HTML
-<input type="radio" name="impl" id="sameimpl" checked/>I'm good, thanks
-<input type="radio" name="impl" />Oh, totally!
-<div id="switchimpl">
-  <p>Then here you go! The <i>Base Swats</i> refers to the maximum number
-of times you can get spanked with an implement if you don't touch the
-intensity at the top of this page... <i>Variants</i> are a list of different
-types of each implement you may have. You can add as many as you like by
-separating each type with commas.</p>
-<table id="implements"><tr><th>Implement</th><th>Base swats</th><th>Variants</th><th>Remove</th></tr></table>
-<button onclick="addNewRow()">Add Implement</button>
-<script>
- var defaults = [
-    {name:"hand", verb:"handspanked", "max":75},
-    {name:"switch", verb:"switched", "max":15},
-    {name:"belt", verb:"belted", "max":50, adjectives:["leather"]},
-    {name:"cane", verb:"caned", "max":15, adjectives:["rattan"]},
-    {name:"brush", verb:"spanked", "max":50, adjectives:["bath","hair"]},
-    {name:"paddle", verb:"paddled", "max":50, adjectives:["lexan","wooden","hole-filled","ping-pong"]},
-    {name:"spoon", verb:"spanked", "max":50, adjectives:["wooden","mixing","slotted"]}
-  ];
- var implementTable = document.getElementById('implements');
+  <input type="radio" name="impl" id="sameimpl" checked/>I'm good, thanks
+  <input type="radio" name="impl" />Oh, totally!
+  <div id="switchimpl">
+    <p>Then here you go! The <i>Base Swats</i> refers to the maximum number
+      of times you can get spanked with an implement if you don't touch the
+      intensity at the top of this page... <i>Variants</i> are a list of different
+      types of each implement you may have. You can add as many as you like by
+      separating each type with commas.</p>
+    <table id="implements"><tr><th>Implement</th><th>Base swats</th><th>Variants</th><th>Remove</th></tr></table>
+    <button onclick="addNewRow()">Add Implement</button>
+    <script>
+     var defaults = [
+       {name:"hand", verb:"handspanked", "max":75},
+       {name:"switch", verb:"switched", "max":15},
+       {name:"belt", verb:"belted", "max":50, adjectives:["leather"]},
+       {name:"cane", verb:"caned", "max":15, adjectives:["rattan"]},
+       {name:"brush", verb:"spanked", "max":50, adjectives:["bath","hair"]},
+       {name:"paddle", verb:"paddled", "max":50, adjectives:["lexan","wooden","hole-filled","ping-pong"]},
+       {name:"spoon", verb:"spanked", "max":50, adjectives:["wooden","mixing","slotted"]}
+     ];
+     var implementTable = document.getElementById('implements');
 
- implementTable.onclick = function(e){
-     var implementList = document.querySelectorAll('tr.implement');
-     if(e.target.className === "removeImplement"
+     implementTable.onclick = function(e){
+       var implementList = document.querySelectorAll('tr.implement');
+       if(e.target.className === "removeImplement"
          && (Array.prototype.filter.call(implementList, function(implement){
-             var inputs = implement.querySelectorAll('input');
-             return !!inputs[0].value
-               && !!inputs[1].value
-               && !isNaN(inputs[1].value);
+           var inputs = implement.querySelectorAll('input');
+           return !!inputs[0].value
+           && !!inputs[1].value
+           && !isNaN(inputs[1].value);
          }).length > 1
-            || (function(){
-              var inputs = e.target.parentNode.parentNode.querySelectorAll('input');
-              return !inputs[0].value
+          || (function(){
+            var inputs = e.target.parentNode.parentNode.querySelectorAll('input');
+            return !inputs[0].value
                 || !inputs[1].value
                 || isNaN(inputs[1].value);
-            })())){
-             var row = e.target.parentNode.parentNode;
-             var table = row.parentNode;
-             table.removeChild(row);
+          })())){
+            var row = e.target.parentNode.parentNode;
+            var table = row.parentNode;
+            table.removeChild(row);
+       }
+     };
+
+     var currentRow, currentColumn, currentInput;
+     function addRow(name, max, adjectives){
+       currentRow = document.createElement('tr');
+       currentRow.className = "implement";
+
+       currentColumn = document.createElement('td');
+       currentInput = document.createElement('input');
+       currentInput.value = name;
+       currentColumn.appendChild(currentInput);
+       currentRow.appendChild(currentColumn);
+
+       currentColumn = document.createElement('td');
+       currentInput = document.createElement('input');
+       currentInput.value = max;
+       currentColumn.appendChild(currentInput);
+       currentRow.appendChild(currentColumn);
+
+       currentColumn = document.createElement('td');
+       currentInput = document.createElement('input');
+       currentInput.value = !!adjectives ? adjectives : "";
+       currentColumn.appendChild(currentInput);
+       currentRow.appendChild(currentColumn);
+
+       currentColumn = document.createElement('td');
+       currentInput = document.createElement('button');
+       currentInput.innerHTML = "Remove";
+       currentInput.className = "removeImplement";
+       currentColumn.appendChild(currentInput);
+       currentRow.appendChild(currentColumn);
+
+       implementTable.appendChild(currentRow);
      }
- };
- 
- var currentRow, currentColumn, currentInput;
- function addRow(name, max, adjectives){
-     currentRow = document.createElement('tr');
-     currentRow.className = "implement";
 
-     currentColumn = document.createElement('td');
-     currentInput = document.createElement('input');
-     currentInput.value = name;
-     currentColumn.appendChild(currentInput);
-     currentRow.appendChild(currentColumn);
+     for(var i = 0; i < defaults.length; i++){
+       addRow(defaults[i].name, defaults[i].max, defaults[i].adjectives);
+     }
 
-     currentColumn = document.createElement('td');
-     currentInput = document.createElement('input');
-     currentInput.value = max;
-     currentColumn.appendChild(currentInput);
-     currentRow.appendChild(currentColumn);
+     function addNewRow(){
+       var last = document.querySelectorAll("tr.implement");
+       last = last[last.length - 1];
+       var inputs = last.querySelectorAll("input");
 
-     currentColumn = document.createElement('td');
-     currentInput = document.createElement('input');
-     currentInput.value = !!adjectives ? adjectives : "";
-     currentColumn.appendChild(currentInput);
-     currentRow.appendChild(currentColumn);
-
-     currentColumn = document.createElement('td');
-     currentInput = document.createElement('button');
-     currentInput.innerHTML = "Remove";
-     currentInput.className = "removeImplement";
-     currentColumn.appendChild(currentInput);
-     currentRow.appendChild(currentColumn);
-     
-     implementTable.appendChild(currentRow);
- }
- 
- for(var i = 0; i < defaults.length; i++){
-     addRow(defaults[i].name, defaults[i].max, defaults[i].adjectives);
- }
-
- function addNewRow(){
-     var last = document.querySelectorAll("tr.implement");
-     last = last[last.length - 1];
-     var inputs = last.querySelectorAll("input");
-     
-     if(!!inputs[0].value && !!inputs[1].value && parseInt(inputs[1].value)){
+       if(!!inputs[0].value && !!inputs[1].value && parseInt(inputs[1].value)){
          addRow('','');
+       }
      }
- }
- 
- function tableToJSON(){
-     return JSON.stringify(Array.prototype.map.call(
+
+     function tableToJSON(){
+       return JSON.stringify(Array.prototype.map.call(
          Array.prototype.filter.call(
-             implementTable.querySelectorAll('tr.implement'), function(row){
-                 var inputs = row.querySelectorAll('input');
-                 return !!inputs[0].value && !!inputs[1].value;
-             }), function(row){
-                 var inputs = row.querySelectorAll('input');
-                 return {
-                     'name': inputs[0].value,
-                     'verb': "spanked",
-                     "max": inputs[1].value,
-                     'adjectives': inputs[2].value.split(',')
-                 };
-             }
-     ));
- }
-</script>
-</div>
+           implementTable.querySelectorAll('tr.implement'), function(row){
+             var inputs = row.querySelectorAll('input');
+             return !!inputs[0].value && !!inputs[1].value;
+           }), function(row){
+             var inputs = row.querySelectorAll('input');
+             return {
+               'name': inputs[0].value,
+               'verb': "spanked",
+               "max": inputs[1].value,
+               'adjectives': inputs[2].value.split(',')
+             };
+           }
+       ));
+     }
+    </script>
+  </div>
 #+END_HTML
 
 * The moment of truth
@@ -293,5 +294,5 @@ liking, clicking below will generate a spanking taking all of the
 above into consideration. Tread lightly!
 
 #+BEGIN_HTML
-<button onclick="spankMe()">Spank me!</button>
+  <button onclick="spankMe()">Spank me!</button>
 #+END_HTML
