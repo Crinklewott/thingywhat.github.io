@@ -84,8 +84,8 @@ Nobody except you:
      ];
      var dress = [
        "over your pants",
-       "pants-down, on your underwear",
-       "pantsless, on your underwear"
+       "pants-down, on your " + (params.diaper? "diaper" : "underwear"),
+       "pantsless, on your " + (params.diaper? "diaper" : "underwear")
      ];
      var statement = [
        "You should be",
